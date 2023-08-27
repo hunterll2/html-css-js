@@ -5,29 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Area</title>
     <style>
-      * {
-        box-sizing: border-box;
+      div {
+        background-color: orange;
+        border: 2px solid blue;
       }
-      .aside {
-        width: 30%;
-        height: 200px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: red;
-        float: left;
-      }
-      .main {
-        width: 70%;
-        height: 200px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: blue;
-        float: left;
+      .fix-this {
+        background-color: initial;
       }
     </style>
   </head>
   <body>
-    <div class="aside"></div>
-    <div class="main"></div>
+    <div>
+      <p>This div is styled</p>
+    </div>
+    <div class="fix-this">
+      <p>This div is not styled</p>
+    </div>
   </body>
 </html>

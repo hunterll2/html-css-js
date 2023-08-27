@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/styles/main.css" />
     <link rel="stylesheet" href="/plugins/prism.css" />
     <script src="/plugins/prism.js" defer="defer"></script>
+    
   </head>
   <body>
     <p>
@@ -117,6 +118,59 @@
       >
       for more examples.
     </p>
+
+    <h6>Example</h6>
+    <section>
+      <script type="text/plain" class="language-css">
+        * {
+          color: gray;
+        }
+        p {
+          color: blue;
+        }
+  
+        #red {
+          color: red;
+        }
+        .important-green {
+          color: green !important;
+        }
+  
+        p.yellow {
+          color: yellow;
+        }
+        .green {
+          color: green;
+        }
+  
+        /* Children */
+        div p {
+          color: purple;
+        }
+      div > p {
+          color: aqua;
+        }
+      </script>
+      <script type="text/plain" class="language-html">
+        <p>I'm paragraph 1</p>
+        <p class="green">I'm paragraph 2</p>
+        <p id="red">I'm paragraph 3</p>
+        <p class="important-green">I'm paragraph 4</p>
+        <p class="yellow">I'm paragraph 5</p>
+
+        <h2>Combained</h2>
+        <p class="green yellow">I'm paragraph 5</p>
+        <p class="green yellow" id="red">I'm paragraph 5</p>
+        <p class="green yellow important-green" id="red">I'm paragraph 5</p>
+
+        <h2>Children</h2>
+        <p>I'm paragraph 1</p>
+        <div>
+          <p>I'm paragraph 1</p>
+        </div>
+      </script>
+      
+    </section>
 
     <!-- inheritance -->
     <h3>Inheritance</h3>
