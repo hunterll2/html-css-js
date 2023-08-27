@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/plugins/prism.css" />
+    <script src="/plugins/prism.js" defer="defer"></script>
+  </head>
+  <body>
+    <p>
+      CSS selectors are used to "find" (or select) the HTML elements you want to
+      style.
+    </p>
+    <p>We can divide CSS selectors into five categories:</p>
+    <ul>
+      <li>
+        <b>Simple selectors</b> - select elements based on name, id, class
+      </li>
+      <li>
+        <a href="https://www.w3schools.com/css/css_combinators.asp"
+          ><b>Combinator selectors</b></a
+        >
+        - select elements based on a specific relationship between them
+      </li>
+      <li>
+        <a href="https://www.w3schools.com/css/css_pseudo_classes.asp"
+          ><b>Pseudo-class selectors</b></a
+        >
+        - select elements based on a certain state
+      </li>
+      <li>
+        <a href="https://www.w3schools.com/css/css_pseudo_elements.asp"
+          ><b>Pseudo-elements selectors</b></a
+        >
+        - select and style a part of an element
+      </li>
+      <li>
+        <a href="https://www.w3schools.com/css/css_attribute_selectors.asp"
+          ><b>Attribute selectors</b></a
+        >
+        - select elements based on an attribute or attribute value
+      </li>
+    </ul>
+
+    <h3>Simple Selector</h3>
+    <div>
+      <h4>Element Selector</h4>
+      <script type="text/plain" class="language-css">
+        p {
+            color: red;
+        }
+      </script>
+      <h4>ID Selector</h4>
+      <script type="text/plain" class="language-css">
+        #elementId {
+            color: red;
+        }
+      </script>
+      <h4>Class Selector</h4>
+      <script type="text/plain" class="language-css">
+        .class-one {
+            color: red;
+        }
+      </script>
+      <h4>Universal Selector</h4>
+      <script type="text/plain" class="language-css">
+        * {
+            color: red;
+        }
+      </script>
+    </div>
+
+    <h3>Combinator selectors</h3>
+    <div>
+      <h4>Descendant Selector</h4>
+      <script type="text/plain" class="language-css">
+        div p {
+            background-color: yellow;
+        }
+      </script>
+
+      <h4>Child Selector (>)</h4>
+      <script type="text/plain" class="language-css">
+        div > p {
+            background-color: yellow;
+        }
+      </script>
+
+      <h4>Adjacent Sibling Selector (+)</h4>
+      <script type="text/plain" class="language-css">
+        div + p {
+            background-color: yellow;
+        }
+      </script>
+
+      <h4>General Sibling Selector (~)</h4>
+      <script type="text/plain" class="language-css">
+        div ~ p {
+            background-color: yellow;
+        }
+      </script>
+
+      <h4>_ Selector</h4>
+      <script type="text/plain" class="language-css">
+        div.class-one.class-two {
+            background-color: yellow;
+        }
+      </script>
+    </div>
+
+    <h3>Attribute Selectors</h3>
+    <div>
+      <h4>[attribute] Selector</h4>
+      <script type="text/plain" class="language-css">
+        a[target] {
+            background-color: yellow;
+        }
+      </script>
+
+      <h4>[attribute="value"] Selector</h4>
+      <script type="text/plain" class="language-css">
+        a[target="_blank"] {
+            background-color: yellow;
+        }
+      </script>
+      <p>
+        <a href="https://www.w3schools.com/css/css_attribute_selectors.asp">
+          Check all the available attribute selectors
+        </a>
+      </p>
+    </div>
+
+    <h3>Pseudo-class selectors</h3>
+    <div>
+      <p>A pseudo-class is used to define a special state of an element.</p>
+      <script type="text/plain" class="language-css">
+        /* unvisited link */
+        a:link {
+        color: #FF0000;
+        }
+
+        /* visited link */
+        a:visited {
+        color: #00FF00;
+        }
+
+        /* mouse over link */
+        a:hover {
+        color: #FF00FF;
+        }
+
+        /* selected link */
+        a:active {
+        color: #0000FF;
+        }
+      </script>
+      <p>
+        Note: a:hover MUST come after a:link and a:visited in the CSS definition
+        in order to be effective! a:active MUST come after a:hover in the CSS
+        definition in order to be effective! Pseudo-class names are not
+        case-sensitive.
+      </p>
+      <p>
+        <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">
+          Check all the available Pseudo-class selectors
+        </a>
+      </p>
+    </div>
+
+    <h3>Pseudo-element selectors</h3>
+    <div>
+      <p>
+        A CSS pseudo-element is used to style specified parts of an element.
+      </p>
+      <script type="text/plain" class="language-css">
+        p::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+        p.intro::first-letter {
+            color: #ff0000;
+            font-size: 200%;
+        }
+        h1::before {
+            content: url(smiley.gif);
+        }
+        h1::after {
+            content: url(smiley.gif);
+        }
+        ::marker {
+            color: red;
+            font-size: 23px;
+        }
+        ::selection {
+            color: red;
+            background: yellow;
+        }
+      </script>
+      <p>
+        <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">
+          Check all the available Pseudo-element selectors
+        </a>
+      </p>
+    </div>
+
+    <h3>Grouping Selector</h3>
+    <script type="text/plain" class="language-css">
+      h1, h2, h3 {
+          color: red;
+      }
+    </script>
+  </body>
+</html>

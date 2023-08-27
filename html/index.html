@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn HTML</title>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/plugins/prism.css" />
+    <script src="/plugins/prism.js" defer="defer"></script>
+  </head>
+
+  <body>
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li>Learn HTML</li>
+    </ul>
+
+    <h1>Learn HTML</h1>
+    <p>
+      <b>HTML</b> is the language used to create the basic strcutrue of the any
+      web page.
+    </p>
+
+    <!-- ========== HTML Elements ========== -->
+    <h2 id="htmlElements">HTML Elements</h2>
+    <section>
+      <p>
+        HTML elements consist of several parts, including the opening and
+        closing tags, the content, and the attributes.
+      </p>
+      <ul>
+        <li>
+          <b>The opening tag</b>: This consists of the element name, wrapped in
+          angle brackets. It indicates the start of the element and the point at
+          which the element's effects begin.
+        </li>
+        <li>
+          <b>The closing tag</b>: This is the same as the opening tag, but with
+          a forward slash before the element name. It indicates the end of the
+          element and the point at which the element's effects stop.
+        </li>
+        <li>
+          <b>The content</b>: This is the content of the element, which can be
+          text, other elements, or a combination of both.
+        </li>
+        <li>
+          <b>The attributes</b>: HTML elements can have attributes, which
+          provide additional information about the element. They are specified
+          in the opening tag of the element and take the form of name-value
+          pairs.
+        </li>
+        <li>
+          <b>The element:</b> The opening tag, the closing tag, and the content
+          together make up the element.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== HTML Document ========== -->
+    <h2 id="#htmlDocument">HTML Document</h2>
+    <section>
+      <h3><code>&lt;!DOCTYPE html&gt;</code></h3>
+      <p>
+        This Specil element is put at the start of the page to let the browser
+        know that the current page is an HTML page
+      </p>
+
+      <h3><code>&lt;html&gt;</code></h3>
+      <p>The first element of any <i>HTML</i> page.</p>
+
+      <h3><code>&lt;head&gt;</code></h3>
+      <p>
+        The head element contains th metadata of the HTML Document (Metadata is
+        not displayed)
+      </p>
+      <p>
+        It typically define the document title, character set, styles, scripts,
+        and other meta information
+      </p>
+
+      <h4><code>&lt;title&gt;</code></h4>
+      <p>
+        The title of the page. It displayed on browser toolbar, on search
+        results, and when the user save the page on bookmarks.
+      </p>
+
+      <h4><code>&lt;style&gt;</code></h4>
+      <p>The current page speical style</p>
+
+      <h4><code>&lt;link&gt;</code></h4>
+      <p>
+        It defined the relationship between the current document and an external
+        resource.
+      </p>
+      <script type="text/plain" class="language-html">
+        &lt;link rel="stylesheet" href="style_file.css" /&gt;
+      </script>
+
+      <h4><code>&lt;meta&gt;</code></h4>
+      <p>
+        Used to defind page basic information such as character set, page
+        description, keywords, author of the document, and viewport settings.
+      </p>
+      <script type="text/plain" class="language-html">
+        &lt;meta charset="UTF-8" /&gt;
+        &lt;meta name="keywords" content="HTML, CSS, JavaScript" /&gt;
+        &lt;meta name="description" content="tutorials" /&gt;
+        &lt;meta name="author" content="John Doe" /&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+      </script>
+
+      <h4><code>&lt;script&gt;</code></h4>
+      <p>
+        The <i>script</i> tag can be used also inside the head element to
+        include JavaScript in the page or to reference a javascript from another
+        page.
+      </p>
+      <pre class="language-markup"><code><!--
+        <script type="text/javascript">
+            document.write("Hello World")
+        </script> 
+    --></code></pre>
+      <pre class="language-markup"><code><!-- 
+        <script type="text/javascript" src="script_file.js"></script> 
+    --></code></pre>
+
+      <h3>&lt;body&gt;</h3>
+      <p>
+        All the content of the page inserated inside the <i>body</i> element.
+        The following is some of the most used elements.
+      </p>
+    </section>
+
+    <!-- ========== Basic Elements ========== -->
+    <h2 id="basicElements">Basic Elements</h2>
+    <section>
+      <h3>Block Elements</h3>
+      <ul>
+        <li><code>&lt;div&gt;</code></li>
+        <li><code>&lt;p&gt;</code></li>
+        <li><code>&lt;hr /&gt;</code></li>
+        <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></li>
+        <li>
+          <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>
+          <ul>
+            <li><code>&lt;li&gt;</code></li>
+          </ul>
+        </li>
+        <li>
+          <code>&lt;table&gt;</code>
+          <ul>
+            <li><code>&lt;caption&gt;</code></li>
+            <li>
+              <code>&lt;thead&gt;</code>
+              <ul>
+                <li>
+                  <code>&lt;tr&gt;</code>
+                  <ul>
+                    <li><code>&lt;th&gt;</code></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>&lt;tbody&gt;</code>
+              <ul>
+                <li>
+                  <code>&lt;tr&gt;</code>
+                  <ul>
+                    <li><code>&lt;th&gt;</code></li>
+                    <li><code>&lt;td&gt;</code></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>&lt;tfoot&gt;</code>
+              <ul>
+                <li>
+                  <code>&lt;tr&gt;</code>
+                  <ul>
+                    <li><code>&lt;td&gt;</code></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Inline Elements</h3>
+      <ul>
+        <li>
+          <code>&lt;a&gt;</code>
+          <p>
+            <script type="text/plain" class="language-html">
+              <a href="/page_url">Link name</a>
+              <a href="#head1">Link on the same page</a>
+            </script>
+          </p>
+        </li>
+        <li><code>&lt;span&gt;</code></li>
+        <li>
+          <code>&lt;img&gt;</code>
+          <p>
+            <script type="text/plain" class="language-html">
+              <img src="img_url.jpg" alt="alternate text">
+            </script>
+          </p>
+        </li>
+        <li><code>&lt;br /&gt;</code></li>
+      </ul>
+
+      <h4>Formatting Elements</h4>
+      <ul>
+        <li><code>&lt;i&gt;</code></li>
+        <li><code>&lt;b&gt;</code></li>
+        <li><code>&lt;ins&gt;</code></li>
+        <li><code>&lt;mark&gt;</code></li>
+        <li><code>&lt;sup&gt;</code></li>
+        <li><code>&lt;sub&gt;</code></li>
+        <li><code>&lt;small&gt;</code></li>
+      </ul>
+    </section>
+
+    <!-- ========== HTML Forms ========== -->
+    <h2 id="htmlForms">HTML Forms</h2>
+    <section>
+      <p>
+        An HTML form is used to collect user input. The user input is most often
+        sent to a server for processing.
+      </p>
+
+      <h3>The &lt;form&gt; Element</h3>
+      <p>
+        A container for different types of input elements, such as: text fields,
+        checkboxes, radio buttons, submit buttons, etc.
+      </p>
+
+      <h3>&lt;form&gt; - Attributes</h3>
+      <ul>
+        <li>
+          <code>action="/"</code>
+          <p>Defines the action to be performed when the form is submitted.</p>
+        </li>
+        <li>
+          <code>target="_selft|_blank"</code>
+          <p>
+            Where to display the response that is received after submitting the
+            form.
+          </p>
+        </li>
+        <li>
+          <code>method="get|post"</code>
+          <p>
+            The HTTP method to be used when submitting the form data. The
+            form-data can be sent as URL variables (with method="get") or as
+            HTTP post transaction (with method="post").
+          </p>
+        </li>
+        <li><code>autocomplete="on|off"</code></li>
+        <li><code>novalidate</code></li>
+      </ul>
+
+      <h3>&lt;form&gt; - Elements</h3>
+      <ul>
+        <li><code>&lt;label&gt;</code></li>
+        <li><code>&lt;input&gt;</code></li>
+        <li>
+          <code>&lt;select&gt;</code>
+          <ul>
+            <li><code>&lt;option&gt;</code></li>
+            <li><code>&lt;optgroup&gt;</code></li>
+          </ul>
+        </li>
+        <li><code>&lt;textarea&gt;</code></li>
+        <li><code>&lt;button&gt;</code></li>
+        <li>
+          <code>&lt;fieldset&gt;</code>
+          <ul>
+            <li><code>&lt;legend&gt;</code></li>
+          </ul>
+        </li>
+        <li>
+          <code>&lt;datalist&gt;</code>
+          <ul>
+            <li><code>&lt;option&gt;</code></li>
+          </ul>
+        </li>
+        <li><code>&lt;output&gt;</code></li>
+      </ul>
+
+      <h4>&lt;input&gt; - Attributes</h4>
+      <ul>
+        <li>
+          <code>type</code>
+          <ul>
+            <li>text</li>
+            <li>email</li>
+            <li>password</li>
+            <li>number</li>
+            <li>date</li>
+            <li>time</li>
+            <li>radio</li>
+            <li>checkbox</li>
+            <li>range</li>
+            <li>file</li>
+            <li>submit</li>
+            <li>reset</li>
+            <li>button</li>
+          </ul>
+        </li>
+        <li>
+          <code>id</code>
+          <p>
+            The <code>id</code> can be used by the <code>label</code> element to
+            reference the <code>input</code> element.
+          </p>
+        </li>
+        <li>
+          <code>name</code>
+          <p>
+            The <code>name</code> used to reference an
+            <code>input</code> element when the form data is submitted.
+          </p>
+          <p>
+            It also used to taied together multiple radio/checkbox elements into
+            one group.
+          </p>
+        </li>
+        <li>
+          <code>value</code>
+          <p>Specifies the initial value of an input.</p>
+        </li>
+        <li>
+          <code>max</code>
+          <small
+            >(For: number, range, date, datetime-local, month, time,
+            week)</small
+          >
+          <p>Specifies the maximum value for an input field.</p>
+        </li>
+        <li>
+          <code>min</code>
+          <small
+            >(For: number, range, date, datetime-local, month, time,
+            week)</small
+          >
+          <p>Specifies the minimum value for an input field.</p>
+        </li>
+        <li>
+          <code>step</code>
+          <small
+            >(For: number, range, date, datetime-local, month, time,
+            week)</small
+          >
+          <p>Specifies the legal number intervals for an input field</p>
+        </li>
+        <li>
+          <code>size</code>
+          <small>(For: text, email, password, search, tel, url)</small>
+          <p>Specifies the width (in characters) of an input field</p>
+        </li>
+        <li>
+          <code>minlength</code>
+          <p>Specifies the minimum number of character for an input field.</p>
+        </li>
+        <li>
+          <code>maxlength</code>
+          <p>Specifies the maximum number of character for an input field.</p>
+        </li>
+        <li><code>placeholder</code></li>
+        <li>
+          <code>list</code>
+          <p>
+            Refers to a <code>datalist</code> element that contains pre-defined
+            options for an <code>input</code> element.
+          </p>
+        </li>
+
+        <li><code>required</code></li>
+        <li><code>readonly</code></li>
+        <li>
+          <code>disabled</code>
+          <p>
+            The value of input field will not be sent when submitting the form!
+          </p>
+        </li>
+        <li><code>checked</code> <small>(For: checkbox, radio)</small></li>
+        <li><code>autofocus</code></li>
+        <li>
+          <code>autocomplete</code>
+          <small
+            >(For: text, search, url, tel, email, password, datepickers, range,
+            color)</small
+          >
+        </li>
+        <li><code>multiple</code> <small>(For: email, file)</small></li>
+        <li>
+          <a
+            href="https://www.w3schools.com/tags/att_input_accept.asp"
+            target="_blank"
+            ><code>accept</code></a
+          >
+          <small>(For: file)</small>
+          <p>
+            Specifies a filter for what file types the user can pick from the
+            file input dialog box
+          </p>
+          <p>
+            Tip: Do not use this attribute as a validation tool. File uploads
+            should be validated on the server.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== HTML Multimedia ========== -->
+    <h2 id="htmlMultimedia">HTML Multimedia</h2>
+    <section>
+      <h3>&lt;video&gt;</h3>
+      <script type="text/plain" class="language-html">
+        <video width="320" height="240" controls>
+            <source src="assets/mov_bbb.mp4" type="video/mp4">
+            <source src="assets/mov_bbb.ogg" type="video/ogg">
+            <p>
+                Your browser doesn't support HTML video. Here is a
+                <a href="assets/mov_bbb.mp4">link to the video</a> instead.
+            </p>
+        </video>
+      </script>
+      <h4>Attributes</h4>
+      <ul>
+        <li><code>src="/"</code></li>
+        <li><code>autoplay</code></li>
+        <li><code>controls</code></li>
+        <li><code>loop</code></li>
+        <li><code>muted</code></li>
+        <li><code>preload="none|metadata|auto|''"</code></li>
+      </ul>
+      <h3>&lt;audio&gt;</h3>
+      <script type="text/plain" class="language-html">
+        <audio controls>
+            <source src="assets/horse.ogg" type="audio/ogg">
+            <source src="assets/horse.mp3" type="audio/mpeg">
+            <p>
+                Download <a href="myAudio.mp3">MP3</a> or
+                <a href="myAudio.ogg">OGG</a> audio.
+            </p>
+          </audio>
+      </script>
+      <h4>Attributes</h4>
+      <ul>
+        <li><code>src="/"</code></li>
+        <li><code>autoplay</code></li>
+        <li><code>controls</code></li>
+        <li><code>loop</code></li>
+        <li><code>muted</code></li>
+        <li><code>preload="none|metadata|auto|''"</code></li>
+      </ul>
+      <h3>&lt;iframe&gt;</h3>
+      <script type="text/plain" class="language-html">
+        <iframe src="/index.html" height="200" width="100%" frameborder="0" title="Iframe Example"></iframe>
+      </script>
+    </section>
+
+    <!-- ========== Examples ========== -->
+    <h2 id="examples">Examples</h2>
+    <section>
+      <h3>Sign Form</h3>
+      <iframe
+        src="/examples/survey.html"
+        frameborder="0"
+        width="100%"
+        height="1100px"
+      ></iframe>
+    </section>
+  </body>
+</html>

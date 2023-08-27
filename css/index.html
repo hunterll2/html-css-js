@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn CSS</title>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/plugins/prism.css" />
+    <script src="/plugins/prism.js" defer="defer"></script>
+    <link rel="stylesheet" href="/assets/styles/w3_boxmodal.css" />
+    <script>
+      function resizeIframe(obj) {
+        obj.style.height =
+          obj.contentWindow.document.documentElement.scrollHeight + "px";
+      }
+    </script>
+  </head>
+
+  <body>
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li>Learn CSS</li>
+    </ul>
+
+    <h1>Learn CSS</h1>
+    <p>
+      <b>CSS</b> is the langauge used to style the web page strcutrue created by
+      <i>HTML</i>.
+    </p>
+
+    <!-- ==================== CSS Syntax ==================== -->
+    <h2 id="cssSyntax">CSS Syntax</h2>
+    <div>
+      <p>A CSS rule consists of a selector and a declaration block.</p>
+      <img src="/assets/img_selector.gif" alt="css selector example" />
+
+      <!-- ==================== Properties and values ==================== -->
+      <h3>Properties and values</h3>
+      <p>At its most basic level, CSS consists of two components:</p>
+      <ul>
+        <li>
+          <b>Properties</b>: These are human-readable identifiers that indicate
+          which stylistic features you want to modify. For example, font-size,
+          width, background-color.
+        </li>
+        <li>
+          <b>Values</b>: Each property is assigned a value. This value indicates
+          how to style the property.
+        </li>
+      </ul>
+      <p>
+        When a property is paired with a value, this pairing is called a
+        <i>CSS declaration</i>.
+      </p>
+
+      <h3>Shorthands</h3>
+      <p>
+        Some properties like font, background, padding, border, and margin are
+        called shorthand properties. This is because shorthand properties set
+        several values in a single line.
+      </p>
+      <script type="text/plain" class="language-css">
+        padding: 10px 15px 15px 5px;
+      </script>
+      <script type="text/plain" class="language-css">
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-left: 5px;
+      </script>
+      <script type="text/plain" class="language-css">
+        background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+      </script>
+      <script type="text/plain" class="language-css">
+        background-color: red;
+        background-image: url(bg-graphic.png);
+        background-position: 10px 10px;
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+      </script>
+
+      <h3>@rules</h3>
+      <p>
+        CSS @rules (pronounced "at-rules") provide instruction for what CSS
+        should perform or how it should behave.
+      </p>
+      <script type="text/plain" class="language-css">
+        @import "styles2.css";
+        @media (min-width: 30em) {
+            body {
+                background-color: blue;
+            }
+        }
+      </script>
+
+      <h3>Comments</h3>
+      <p>CSS comments begin with /* and end with */.</p>
+      <script type="text/plain" class="language-css">
+        /* reset global styles */
+        * {
+            border-box: box-size;
+        }
+      </script>
+    </div>
+
+    <!-- ==================== Applying CSS to HTML ==================== -->
+    <h2 id="ApplyingCSSToHTML">Applying CSS to HTML</h2>
+    <div>
+      <h3>External stylesheet</h3>
+      <p>
+        An external stylesheet contains CSS in a separate file with a .css
+        extension.
+      </p>
+      <p>
+        This is the most common and useful method of bringing CSS to a document.
+      </p>
+      <p>
+        You can link a single CSS file to multiple web pages, styling all of
+        them with the same CSS stylesheet.
+      </p>
+      <script type="text/plain" class="language-html">
+        <head>
+            <link rel="stylesheet" href="styles.css" />
+        </head>
+      </script>
+      <h3>Internal stylesheet</h3>
+      <script type="text/plain" class="language-html">
+        <style>
+            h1 {
+                color: blue;
+                background-color: yellow;
+                border: 1px solid black;
+            }
+
+            p {
+                color: red;
+            }
+        </style>
+      </script>
+      <h3>Inline styles</h3>
+      <script type="text/plain" class="language-html">
+        <p style="color: blue;background-color: yellow;border: 1px solid black;">
+            Hello World!
+        </p>
+      </script>
+    </div>
+
+    <!-- ==================== Selectors ==================== -->
+    <h2 id="cssSelectors">Selectors</h2>
+    <iframe
+      src="./selectors.html"
+      frameborder="0"
+      width="100%"
+      onload="resizeIframe(this)"
+    ></iframe>
+
+    <!-- ==================== Cascade, specificity, and inheritance ==================== -->
+    <h2 id="cssCascadeSpecificityInheritance">
+      Cascade, specificity, and inheritance
+    </h2>
+    <iframe
+      src="./specificity.html"
+      frameborder="0"
+      width="100%"
+      scrolling="no"
+      onload="resizeIframe(this)"
+    ></iframe>
+
+    <!-- ==================== The box model ==================== -->
+    <h2 id="cssBoxModal">The box model</h2>
+    <iframe
+      src="./box_modal.html"
+      frameborder="0"
+      width="100%"
+      scrolling="no"
+      onload="resizeIframe(this)"
+    ></iframe>
+  </body>
+</html>

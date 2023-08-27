@@ -1,0 +1,45 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+code {
+}
+
+h2 {
+  border-bottom: 1px solid;
+}
+
+h3 {
+}
+
+h4 {
+  font-weight: normal;
+  font-size: large;
+}
+
+li code {
+  background-color: rgba(222, 222, 222, 0.3);
+  color: crimson;
+  font-size: large;
+}
+
+/* Style the list */
+ul.breadcrumb {
+    padding-left: 8px;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li + li:before {
+  padding: 4px;
+  color: black;
+  content: "/\00a0";
+}

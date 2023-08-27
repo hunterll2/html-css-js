@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Cascade, specificity, and inheritance</title>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/plugins/prism.css" />
+    <script src="/plugins/prism.js" defer="defer"></script>
+  </head>
+  <body>
+    <p>
+      You may encounter scenarios where two selectors select the same HTML
+      element.
+    </p>
+    <script type="text/plain" class="language-css">
+      .special {
+          color: red;
+      }
+      p {
+          color: blue;
+      }
+    </script>
+    <script type="text/plain" class="language-html">
+      <p class="special">What color am I?</p>
+    </script>
+    <p>
+      Which selector prevails? Do you expect to see blue or red paragraph text?
+    </p>
+
+    <h3>Conflicting rules</h3>
+    <p>
+      CSS stands for Cascading Style Sheets, and that first word cascading is
+      incredibly important to understand — the way that the cascade behaves is
+      key to understanding CSS.
+    </p>
+    <p>
+      At some point, you will be working on a project and you will find that the
+      CSS you thought should be applied to an element is not working. Often, the
+      problem is that you create two rules that apply different values of the
+      same property to the same element. Cascade and the closely-related concept
+      of specificity are mechanisms that control which rule applies when there
+      is such a conflict. The rule that's styling your element may not be the
+      one you expect, so you need to understand how these mechanisms work.
+    </p>
+    <p>
+      Also significant here is the concept of inheritance, which means that some
+      CSS properties by default inherit values set on the current element's
+      parent element and some don't. This can also cause some behavior that you
+      might not expect.
+    </p>
+
+    <h3>Specificity & Cascade</h3>
+    <p>
+      Specificity is the algorithm that the browser uses to decide which
+      property value is applied to an element. If multiple style blocks have
+      different selectors that configure the same property with different values
+      and target the same element, specificity decides the property value that
+      gets applied to the element.
+    </p>
+    <p>
+      Specificity is basically a measure of how specific a selector's selection
+      will be:
+    </p>
+
+    <h6>Example 1</h6>
+    <script type="text/plain" class="language-css">
+      h1 {
+          color: red;
+      }
+      h1 {
+          color: blue;
+      }
+    </script>
+    <script type="text/plain" class="language-html">
+      <h1>This my heading</h1>
+    </script>
+    <h6>Example 2</h6>
+    <script type="text/plain" class="language-css">
+      .main-heading {
+          color: red;
+      }
+      h1 {
+          color: blue;
+      }
+    </script>
+    <script type="text/plain" class="language-html">
+      <h1 class="main-heading">This is my heading.</h1>
+    </script>
+
+    <h4>Specificity Hierarchy</h4>
+    <ol>
+      <li>
+        <code>!important</code> rule - Example:
+        <code>color: red !important</code>
+      </li>
+      <li>
+        <b>Inline styles</b> - Example:
+        <code>&lt;h1 style="color: pink;"&gt;</code>
+      </li>
+      <li><b>IDs</b> - Example: <code>#navbar</code></li>
+      <li>
+        <b>Classes, pseudo-classes, attribute selectors</b> - Example:
+        <code>.test, :hover, [href]</code>
+      </li>
+      <li>
+        <b>Elements and pseudo-elements</b> - Example: <code>h1, ::before</code>
+      </li>
+      <li>Universal selector - Example: <code>* {color: red}</code></li>
+    </ol>
+    <p>
+      Check
+      <a href="https://specificity.keegan.st/">Specificity Calculator</a> for
+      better understanding. And check
+      <a href="https://www.w3schools.com/css/css_specificity.asp"
+        >w3schools page about specificity</a
+      >
+      for more examples.
+    </p>
+
+    <!-- inheritance -->
+    <h3>Inheritance</h3>
+    <div>
+      <p>
+        Inheritance also needs to be understood in this context — some CSS
+        property values set on parent elements are inherited by their child
+        elements, and some aren't.
+      </p>
+      <p>
+        For example, if you set a color and font-family on an element, every
+        element inside it will also be styled with that color and font, unless
+        you've applied different color and font values directly to them.
+      </p>
+      <p>
+        Other properties such as margin, padding, and border are not inherited
+        properties.
+      </p>
+
+      <h6>Example 1</h6>
+      <script type="text/plain" class="language-css">
+        body {
+            color: blue;
+        }
+        span {
+            color: black;
+        }
+      </script>
+      <script type="text/plain" class="language-html">
+        <p>As the body has been set to have a color of blue this is inherited through the descendants.</p>
+        <p>We can change the color by targeting the element with a selector,
+            such as this <span>span</span>.</p>
+      </script>
+
+      <h6>Example 2</h6>
+      <script type="text/plain" class="language-css">
+        .main {
+            color: red;
+            border: 2px solid blue;
+            padding: 16px;
+        }
+        .special {
+            color: black;
+            font-weight: bold;
+        }
+      </script>
+      <script type="text/plain" class="language-html">
+        <ul class="main">
+            <li>Item One</li>
+            <li>Item Two
+                <ul>
+                    <li>2.1</li>
+                    <li>2.2</li>
+                </ul>
+            </li>
+            <li>Item Three
+                <ul class="special">
+                    <li>3.1
+                        <ul>
+                            <li>3.1.1</li>
+                            <li>3.1.2</li>
+                        </ul>
+                    </li>
+                    <li>3.2</li>
+                </ul>
+            </li>
+        </ul>
+      </script>
+
+      <h4>Controlling inheritance</h4>
+      <p>
+        CSS provides special universal property values for controlling
+        inheritance. Every CSS property accepts these values.
+      </p>
+      <ul>
+        <li>
+          <code>inherit</code>: Sets the property value applied to a selected
+          element to be the same as that of its parent element.
+        </li>
+        <li>
+          <code>initial</code>: Sets the property value applied to a selected
+          element to the initial value of that property.
+        </li>
+        <li>
+          <code>unset</code>: Resets the property to its natural value, which
+          means that if the property is naturally inherited it acts like
+          inherit, otherwise it acts like initial.
+        </li>
+      </ul>
+      <h6>Example</h6>
+      <script type="text/plain" class="language-css">
+        body {
+            color: green;
+        }
+        .my-class-1 a {
+            color: inherit;
+        }
+        .my-class-2 a {
+            color: initial;
+        }
+        .my-class-3 a {
+            color: unset;
+        }
+      </script>
+      <script type="text/plain" class="language-html">
+        <ul>
+            <li>Default <a href="#">link</a> color</li>
+            <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+            <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+            <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+        </ul>
+      </script>
+
+      <h4>Resetting all property values</h4>
+      <p>
+        The CSS shorthand property all can be used to apply one of these
+        inheritance values to (almost) all properties at once. Its value can be
+        any one of the inheritance values (inherit, initial, revert,
+        revert-layer, or unset).
+      </p>
+      <h6>Example</h6>
+      <script type="text/plain" class="language-css">
+        blockquote {
+            background-color: orange;
+            border: 2px solid blue;
+        }
+        .fix-this {
+            all: unset;
+        }
+      </script>
+      <script type="text/plain" class="language-html">
+        <blockquote>
+            <p>This blockquote is styled</p>
+        </blockquote>
+        <blockquote class="fix-this">
+            <p>This blockquote is not styled</p>
+        </blockquote>
+      </script>
+    </div>
+  </body>
+</html>

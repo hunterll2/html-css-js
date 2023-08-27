@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Modal</title>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/plugins/prism.css" />
+    <script src="/plugins/prism.js" defer="defer"></script>
+  </head>
+
+  <body>
+    <p>
+      The CSS box model is essentially a box that wraps around every HTML
+      element. It consists of: margins, borders, padding, and the actual
+      content.
+    </p>
+    <div class="tip">
+      Everything in CSS has a box around it, and understanding these boxes is
+      key to being able to create more complex layouts with CSS, or to align
+      items with other items.
+    </div>
+    <div class="w3-boxmodel">
+      <div class="margin">
+        <div class="border w3-theme">
+          <div class="padding">
+            <div class="content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <b>Content</b> - The content of the box, where text and images appear
+      </li>
+      <li>
+        <b>Padding</b> - Clears an area around the content. The padding is
+        transparent
+      </li>
+      <li><b>Border</b> - A border that goes around the padding and content</li>
+      <li>
+        <b>Margin</b> - Clears an area outside the border. The margin is
+        transparent
+      </li>
+    </ul>
+
+    <h3>Block and inline boxes</h3>
+    <section>
+      <p>
+        In CSS we have several types of boxes that generally fit into the
+        categories of <b>block boxes</b> and <b>inline boxes</b>. The type
+        refers to how the box behaves in terms of page flow and in relation to
+        other boxes on the page.
+      </p>
+      <p>
+        Boxes have an <strong>inner display</strong> type and an
+        <strong>outer display</strong> type. In general, you can set various
+        values for the display type using the <code>display</code> property,
+        which can have various values.
+      </p>
+    </section>
+
+    <h3>Outer display type</h3>
+    <section>
+      <p>If a box has an outer display type of <code>block</code>, then:</p>
+      <ul>
+        <li>The box will break onto a new line.</li>
+        <li>
+          The <code>width</code> and <code>height</code> properties are
+          respected.
+        </li>
+        <li>
+          <code>Padding</code>, <code>margin</code> and <code>border</code> will
+          cause other elements to be pushed away from the box.
+        </li>
+        <li>
+          If <code>width</code> is not specified, the box will extend in the
+          inline direction to fill the space available in its container.
+        </li>
+      </ul>
+      <p>If a box has an outer display type of <code>inline</code>, then:</p>
+      <ul>
+        <li>The box will not break onto a new line.</li>
+        <li>
+          The <code>width</code> and <code>height</code> properties will not
+          apply.
+        </li>
+        <li>
+          Top and bottom <code>padding</code>, <code>margin</code> and
+          <code>border</code> will apply but <ins>will not cause</ins> other
+          inline boxes to move away from the box.
+        </li>
+        <li>
+          Left and right <code>padding</code>, <code>margin</code> and
+          <code>border</code> will apply and <ins>will cause</ins>
+          other inline boxes to move away from the box.
+        </li>
+      </ul>
+    </section>
+
+    <h3>Inner display type</h3>
+    <section>
+      <p>
+        Boxes also have an inner display type, which dictates how elements
+        inside that box are laid out.
+      </p>
+      <p>
+        <code>block</code> and <code>inline</code> layout is the default way
+        things behave on the web. By default the elements inside a box are also
+        laid out in normal flow and behave as <b>block</b> or
+        <b>inline</b> boxes.
+      </p>
+      <p>
+        You can change the <b>inner display</b> type for example by setting
+        <code>display: flex;</code>.
+        <mark>
+          The element will still use the outer display type
+          <code>block</code> but this changes the inner display type to
+          <code>flex</code>.
+        </mark>
+        Any direct children of this box will become flex items and behave
+        according to the <i>Flexbox</i> specification.
+      </p>
+    </section>
+
+    <h3>Examples of different display types</h3>
+    <section>
+      <h6>Example 1</h6>
+      <script type="text/plain" class="language-css">
+        /* Style elements for demonstration */
+        p,
+        span,
+        ul,
+        li {
+            border-width: 1px;
+            border-style: solid;
+            border: 1px solid;
+            padding: 4px;
+            margin: 4px;
+        }
+
+        p {
+            border-color: initial;
+        }
+        ul {
+            border-color: gray;
+        }
+        li {
+            border-color: brown;
+            border-style: dotted;
+        }
+        span {
+            border-color: brown;
+        }
+
+        /* Change display type for the elements */
+        p {}
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        span {
+            display: block;
+        }
+      </script>
+      <script type="text/plain" class="language-html">
+        <p>I am a paragraph. A short one.</p>
+        <ul>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+        <p>I am another paragraph. Some of the <span>words</span> have been wrapped in a <span>span element</span>.</p>
+      </script>
+
+      <h3>Standard vs. Alternate Box Model</h3>
+      <section>
+        <p>
+          In the <strong>standard box model</strong>, if you give a box a
+          <code>width</code> and a <code>height</code> attributes,
+          <ins>this defines the width and height of the content box</ins>. Any
+          padding and border is then added to get the total size taken up by the
+          box.
+        </p>
+        <p>
+          In the <strong>alternative box model</strong>, any width is the width
+          of the visible box on the page.
+          <ins>
+            The content area width is that width minus the width for the padding
+            and border
+          </ins>
+          . No need to add up the border and padding to get the real size of the
+          box.
+        </p>
+        <h6>Example 1</h6>
+        <script type="text/plain" class="language-css">
+          div {
+            width: 400px;
+            height: 100px;
+            margin: 8px;
+            padding: 16px;
+            border: 4px solid;
+          }
+        </script>
+        <script type="text/plain" class="language-html">
+          <div style="box-sizing: content-box;"></div>
+          <div style="box-sizing: border-box;"></div>
+        </script>
+        <div
+          style="
+            width: 400px;
+            height: 100px;
+            margin: 8px;
+            padding: 16px;
+            border: 4px solid;
+            box-sizing: content-box;
+          "
+        ></div>
+        <div
+          style="
+            width: 400px;
+            height: 100px;
+            margin: 8px;
+            padding: 16px;
+            border: 4px solid;
+            box-sizing: border-box;
+          "
+        ></div>
+        <h6>Example 2</h6>
+        <script type="text/plain" class="language-css">
+          * {
+              box-sizing: border-box;
+          }
+          .aside {
+              width: 30%;
+              height: 200px;
+              border-width: 1px;
+              border-style: solid;
+              border-color: red;
+              float: left;
+          }
+          .main {
+              width: 70%;
+              height: 200px;
+              border-width: 1px;
+              border-style: solid;
+              border-color: blue;
+              float: left;
+          }
+        </script>
+        <script type="text/plain" class="language-html">
+          <div class="aside"></div>
+          <div class="main"></div>
+        </script>
+      </section>
+    </section>
+  </body>
+</html>
