@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS - Common Properties</title>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/plugins/prism.css" />
+    <script src="/plugins/prism.js" defer="defer"></script>
   </head>
   <body>
     <h3>Height, Width and Overflow</h3>
@@ -25,11 +28,17 @@
       </li>
       <li>
         <code>max-width: <i>length</i>;</code>
-        <p>If the borswer add horizntal scroll bar because on an element, this will fix the problem</p>
+        <p>
+          If the borswer add horizntal scroll bar because on an element, this
+          will fix the problem
+        </p>
       </li>
       <li>
         <code>overflow: <i>visible|hidden|clip|scroll|auto</i>;</code>
-        <p class="note">The overflow property only works for block elements with a specified height.</p>
+        <p class="note">
+          The overflow property only works for block elements with a specified
+          height.
+        </p>
       </li>
     </ul>
     <p></p>
@@ -110,51 +119,157 @@
           </li>
         </ul>
       </li>
-    </ul>
-    <h3>Backgrounds</h3>
-    <ul>
-      <li><code>background-color</code></li>
-      <li><code>background-image</code></li>
-      <li><code>background-repeat</code></li>
-      <li><code>background-attachment</code></li>
-      <li><code>background-position</code></li>
       <li>
-        <code
-          >background: bg-color bg-image position/bg-size bg-repeat bg-origin
-          bg-clip bg-attachment initial|inherit;</code
-        >
+        Outline
+        <ul>
+          <li>
+            <code>Outline</code>
+            <ul>
+              <li><code>outline-style</code></li>
+              <li><code>outline-color</code></li>
+              <li><code>outline-width</code></li>
+              <li><code>outline-offset</code></li>
+              <li><code>outline</code></li>
+            </ul>
+          </li>
+        </ul>
       </li>
     </ul>
-    <h3>Outline</h3>
+
+    <h3>Backgrounds</h3>
     <ul>
-        <li><code>outline-style</code></li>
-        <li><code>outline-color</code></li>
-        <li><code>outline-width</code></li>
-        <li><code>outline-offset</code></li>
-        <li><code>outline</code></li>
+      <li><code><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-color" target="_blank">background-color</a>: <i>color|transparent</i></code></li>
+      <li><code><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-image" target="_blank">background-image</a>: <i>url|none</i></code></li>
+      <li>
+        <code>
+          <a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-repeat" target="_blank">background-repeat</a>: <i>repeat|repeat-x|repeat-y|no-repeat</i>
+        </code>
+      </li>
+      <li><code><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-attachment" target="_blank">background-attachment</a>: <i>scroll|fixed|local</i></code></li>
+      <li>
+        <code><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-position" target="_blank">background-position</a>: <i>keyword keyword|x% y%|xpos ypos</i></code>
+      </li>
+      <li><code><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-origin" target="_blank">background-origin</a>: <i>padding-box|border-box|content-box</i></code></li>
+      <li><code><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-clip" target="_blank">background-clip</a>: <i>padding-box|border-box|content-box</i></code></li>
+      <li><code><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-size" target="_blank">background-size</a>: <i>auto|length|cover|contain|percentage percentage</i></code></li>
+      <li>
+        <code>
+          <a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background" target="_blank">background</a>: bg-color bg-image position/bg-size bg-repeat bg-origin
+          bg-clip bg-attachment initial|inherit;
+        </code>
+      </li>
     </ul>
     <h3>CSS Text</h3>
     <ul>
-        <li><code>color</code></li>
-        <li><code>text-align: <i>left|right|center|justify</i>;</code></li>
-        <li><code>direction: <i>ltr|rtl</i>;</code></li>
-        <li><code>vertical-align: <i>baseline|length|sub|super|top|text-top|middle|bottom|text-bottom</i></code>
-            <p>Check <a href="https://www.w3schools.com/cssref/pr_pos_vertical-align.php">CSS vertical-align Property</a></p>
-        </li>
-        <li><code>text-decoration</code></li>
-        <li><code>text-transform: capitalize|uppercase|lowercase</code></li>
-        <li>Text Spacing
-            <ul>
-                <li><code>text-indent: <i>length</i>;</code></li>
-                <li><code>letter-spacing: <i>normal|length</i>;</code></li>
-                <li><code>line-height: <i>normal|number|length</i>;</code></li>
-                <li><code>word-spacing: <i>normal|length</i>;</code></li>
-                <li><code>white-space: <i>normal|nowrap|pre|pre-line|pre-wrap</i>;</code>
-                    <p>Check <a href="https://www.w3schools.com/cssref/pr_text_white-space.php">CSS white-space Property</a></p>
-                </li>
-            </ul>
-        </li>
-        <li><code>text-shadow: <i>h-shadow v-shadow blur-radius color</i>;</code></li>
+      <li><code>color</code></li>
+      <li>
+        <code>text-align: <i>left|right|center|justify</i>;</code>
+      </li>
+      <li>
+        <code>direction: <i>ltr|rtl</i>;</code>
+      </li>
+      <li>
+        <code
+          >vertical-align:
+          <i
+            >baseline|length|sub|super|top|text-top|middle|bottom|text-bottom</i
+          ></code
+        >
+        <p>
+          Check
+          <a href="https://www.w3schools.com/cssref/pr_pos_vertical-align.php" target="_blank"
+            >CSS vertical-align Property</a
+          >
+        </p>
+      </li>
+      <li><code>text-decoration</code></li>
+      <li><code>text-transform: capitalize|uppercase|lowercase</code></li>
+      <li>
+        Text Spacing
+        <ul>
+          <li>
+            <code>text-indent: <i>length</i>;</code>
+          </li>
+          <li>
+            <code>letter-spacing: <i>normal|length</i>;</code>
+          </li>
+          <li>
+            <code>line-height: <i>normal|number|length</i>;</code>
+          </li>
+          <li>
+            <code>word-spacing: <i>normal|length</i>;</code>
+          </li>
+          <li>
+            <code
+              >white-space: <i>normal|nowrap|pre|pre-line|pre-wrap</i>;</code
+            >
+            <p>
+              Check
+              <a href="https://www.w3schools.com/cssref/pr_text_white-space.php" target="_blank"
+                >CSS white-space Property</a
+              >
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <code>text-shadow: <i>h-shadow v-shadow blur-radius color</i>;</code>
+      </li>
+    </ul>
+    <h3>CSS Fonts</h3>
+    <ul>
+      <li>
+        <code>font-fmaily: <i>family-name|generic-family</i></code>
+        <p>Generic Font Families:</p>
+        <ul>
+          <li><code>Serif</code></li>
+          <li><code>Sans-serif</code></li>
+          <li><code>Monospace</code></li>
+          <li><code>Cursive</code></li>
+          <li><code>Fantasy</code></li>
+        </ul>
+        <p>Web safe fonts:</p>
+        <ul>
+          <li><code>Arial (sans-serif)</code></li>
+          <li><code>Verdana (sans-serif)</code></li>
+          <li><code>Tahoma (sans-serif)</code></li>
+          <li><code>Trebuchet MS (sans-serif)</code></li>
+          <li><code>Times New Roman (serif)</code></li>
+          <li><code>Georgia (serif)</code></li>
+          <li><code>Garamond (serif)</code></li>
+          <li><code>Courier New (monospace)</code></li>
+          <li><code>Brush Script MT (cursive)</code></li>
+        </ul>
+        <p>
+          Check
+          <a href="https://www.w3schools.com/css/css_font.asp#gsc.tab=0" target="_blank"
+            >CSS Fonts</a
+          >
+        </p>
+      </li>
+      <li>
+        <code>font-style: <i>normal|italic|oblique</i></code>
+      </li>
+      <li>
+        <code>font-weight: <i>normal|bold|bolder|lighter|number</i></code>
+      </li>
+      <li>
+        <code
+          >font-size:
+          <i
+            >medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length</i
+          ></code
+        >
+      </li>
+      <li>
+        <code
+          >font:
+          <i
+            >font-style font-variant font-weight font-size/line-height
+            font-family</i
+          ></code
+        >
+      </li>
     </ul>
   </body>
 </html>

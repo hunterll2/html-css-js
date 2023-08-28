@@ -5,21 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Area</title>
     <style>
-      div {
-        background-color: orange;
-        border: 2px solid blue;
+      /* Style elements for demonstration */
+      p,
+      span,
+      ul,
+      li {
+        border-width: 1px;
+        border-style: solid;
+        border: 1px solid;
+        padding: 4px;
+        margin: 4px;
       }
-      .fix-this {
-        background-color: initial;
+
+      p {
+        border-color: initial;
+      }
+      ul {
+        border-color: gray;
+      }
+      li {
+        border-color: brown;
+        border-style: dotted;
+      }
+      span {
+        border-color: brown;
+      }
+
+      /* Change display type for the elements */
+      p {
+      }
+      ul {
+        display: flex;
+        list-style: none;
+      }
+
+      span {
+        display: block;
       }
     </style>
   </head>
   <body>
-    <div>
-      <p>This div is styled</p>
-    </div>
-    <div class="fix-this">
-      <p>This div is not styled</p>
-    </div>
+    <!-- <div class="box-height-width box-margin-padding-border box-bg box-text box-paragraph box-font">
+      <h1>Hello World</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos rem a
+        explicabo blanditiis harum facere officiis dolorum fugit veritatis
+        corrupti, aperiam labore odit! Nobis non dolores, repellat cumque eaque
+        illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        ducimus quam provident odit, nesciunt dolore laboriosam doloremque.
+        Cupiditate rerum natus sed cumque. Aperiam ipsam, molestias corrupti
+        totam iure eos eligendi. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Soluta natus dolores, reiciendis eligendi, architecto
+        hic maxime iste officia impedit ipsam nisi adipisci voluptatem aliquam
+        illum tenetur. Officia blanditiis velit maiores! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Blanditiis soluta accusamus quod
+        molestias voluptas aut consequuntur eos praesentium incidunt porro quis
+        exercitationem modi fuga ab, quas dicta quam esse atque! 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos rem a
+        explicabo blanditiis harum facere officiis dolorum fugit veritatis
+        corrupti, aperiam labore odit! Nobis non dolores, repellat cumque eaque
+        illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        ducimus quam provident odit, nesciunt dolore laboriosam doloremque.
+        Cupiditate rerum natus sed cumque. Aperiam ipsam, molestias corrupti
+        totam iure eos eligendi. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Soluta natus dolores, reiciendis eligendi, architecto
+        hic maxime iste officia impedit ipsam nisi adipisci voluptatem aliquam
+        illum tenetur. Officia blanditiis velit maiores! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Blanditiis soluta accusamus quod
+        molestias voluptas aut consequuntur eos praesentium incidunt porro quis
+        exercitationem modi fuga ab, quas dicta quam esse atque! 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos rem a
+        explicabo blanditiis harum facere officiis dolorum fugit veritatis
+        corrupti, aperiam labore odit! Nobis non dolores, repellat cumque eaque
+        illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        ducimus quam provident odit, nesciunt dolore laboriosam doloremque.
+        Cupiditate rerum natus sed cumque. Aperiam ipsam, molestias corrupti
+        totam iure eos eligendi. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Soluta natus dolores, reiciendis eligendi, architecto
+        hic maxime iste officia impedit ipsam nisi adipisci voluptatem aliquam
+        illum tenetur. Officia blanditiis velit maiores! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Blanditiis soluta accusamus quod
+        molestias voluptas aut consequuntur eos praesentium incidunt porro quis
+        exercitationem modi fuga ab, quas dicta quam esse atque! 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos rem a
+        explicabo blanditiis harum facere officiis dolorum fugit veritatis
+        corrupti, aperiam labore odit! Nobis non dolores, repellat cumque eaque
+        illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        ducimus quam provident odit, nesciunt dolore laboriosam doloremque.
+        Cupiditate rerum natus sed cumque. Aperiam ipsam, molestias corrupti
+        totam iure eos eligendi. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Soluta natus dolores, reiciendis eligendi, architecto
+        hic maxime iste officia impedit ipsam nisi adipisci voluptatem aliquam
+        illum tenetur. Officia blanditiis velit maiores! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Blanditiis soluta accusamus quod
+        molestias voluptas aut consequuntur eos praesentium incidunt porro quis
+        exercitationem modi fuga ab, quas dicta quam esse atque!
+      </p>
+    </div> -->
+
+    <p>I am a paragraph. A short one.</p>
+    <ul>
+      <li>Item One</li>
+      <li>Item Two</li>
+      <li>Item Three</li>
+    </ul>
+    <p>
+      I am another paragraph. Some of the <span>words</span> have been wrapped
+      in a <span>span element</span>.
+    </p>
   </body>
 </html>
