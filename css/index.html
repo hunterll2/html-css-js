@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base target="_blank">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn CSS</title>
     <link rel="stylesheet" href="/assets/styles/main.css" />
     <link rel="stylesheet" href="/plugins/prism.css" />
     <script src="/plugins/prism.js" defer="defer"></script>
-    <link rel="stylesheet" href="/assets/styles/w3_boxmodal.css" />
     <script>
       function resizeIframe(obj) {
         obj.style.height =
@@ -33,7 +31,7 @@
     <h2 id="cssSyntax">CSS Syntax</h2>
     <div>
       <p>A CSS rule consists of a selector and a declaration block.</p>
-      <img src="/assets/img_selector.gif" alt="css selector example" />
+      <img src="/assets/img_selector.gif" alt="css selector example" style="max-width: 100%;"/>
 
       <!-- ==================== Properties and values ==================== -->
       <h3>Properties and values</h3>
@@ -217,6 +215,16 @@
     <h2 id="cssCommonProperties">Common Properties</h2>
     <iframe
       src="./common_properties.html"
+      frameborder="0"
+      width="100%"
+      scrolling="no"
+      onload="resizeIframe(this)"
+    ></iframe>
+
+    <!-- ==================== Common Properties ==================== -->
+    <h2 id="cssCommonProperties">css layout</h2>
+    <iframe
+      src="./css_layout.html"
       frameborder="0"
       width="100%"
       scrolling="no"

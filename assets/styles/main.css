@@ -1,42 +1,143 @@
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
+
+html {
+  font-size: 26px;
+}
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: antiquewhite;
+  padding: 1rem 10%;
+}
+
+html[data-iframe] > body {
+  padding: 0px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    padding: initial;
+  }
 }
 
 code {
   background-color: rgba(222, 222, 222, 0.3);
   color: crimson;
-  font-size: large;
+  font-size: smaller;
+}
+
+code i {
+  color: grey;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 3rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 h2 {
-  border-bottom: 1px solid;
+  font-size: 1.4rem;
+  border-bottom: 8px solid hsla(45, 10%, 40%, 0.4);
+  margin: 3rem 0 1rem;
+}
+
+h2 a {
+  color: inherit;
+  text-decoration: none;
 }
 
 h3 {
+  font-size: 1.1rem;
+  margin: 2rem 0 1rem;
 }
 
 h4 {
   font-weight: normal;
-  font-size: large;
+  font-size: 1rem;
 }
 
-/* Style the list */
+/*  */
+ul, ol {
+  font-size: 0.7rem;
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul, ol ::marker {
+  color: hsla(45, 10%, 40%, 1);
+}
+
+ul li, ol li {
+  margin: 0.5rem 0;
+}
+
+li li li {
+  margin: initial;
+}
+
+ul p, ol p {
+  font-size: smaller;
+  margin: 0.1rem 0 0.5rem;
+}
+
+/*  */
 ul.breadcrumb {
     padding-left: 8px;
 }
 
-/* Display list items side by side */
 ul.breadcrumb li {
   display: inline;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li + li:before {
   padding: 4px;
   color: black;
   content: "/\00a0";
+}
+
+/*  */
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: white !important;
+  background-color: hsla(45, 10%, 40%, 1);
+}
+
+a:visited {
+  color: initial;
+}
+
+a::after {
+  margin-left: 6px;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+}
+
+a::after:hover {
+  color: white !important;
+}
+
+small {
+  /* font-size: 1.5vw; */
+}
+
+/*  */
+.code-toolbar pre[class*=language-] {
+  font-size: 0.7rem;
+  border-radius: 4px;
+  background-color: rgba(155, 155, 155, 0.1);
 }
