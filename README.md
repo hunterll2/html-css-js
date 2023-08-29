@@ -24,3 +24,16 @@ Video Link: https://youtu.be/Ziiss33ukl8
 
 - CSS Box modal
 
+## Session 5 - CSS Common Properties
+
+Video Link: https://youtu.be/Fj7vsG_PvK4
+
+- CSS Colors
+- CSS Units
+- Height, Width and Overflow
+- Margins, padding, and borders
+- Backgrounds
+- CSS Text
+- CSS Fonts
+- CSS Lists
+- Position and float Properties
