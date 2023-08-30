@@ -37,3 +37,9 @@ Video Link: https://youtu.be/Fj7vsG_PvK4
 - CSS Fonts
 - CSS Lists
 - Position and float Properties
+
+## Session 6 - An Example of an HTML Form
+
+Video Link: https://youtu.be/Aj0LZUMOGOg
+
+- Survey form in HTML

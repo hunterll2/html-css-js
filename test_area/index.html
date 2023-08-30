@@ -6,20 +6,11 @@
     <title>Test Area</title>
     <style>
       div {
-        width: 400px;
-        height: 300px;
-        border: 5px dashed red;
-        outline: 5px solid blue;
-        border-radius: 10px;
-        overflow: auto;
-        background-image: url("");
+        margin: 1rem 0;
       }
-      p {
-        font-size: 32px;
-        text-shadow: 10px 10px 10px black;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      header {
+        font-size: 4rem;
       }
-
     </style>
   </head>
   <body>
@@ -80,7 +71,248 @@
         exercitationem modi fuga ab, quas dicta quam esse atque!
       </p>
     </div> -->
+    
+    <header>
+      Survery
+    </header>
+    
+    <form action="#" method="get" target="_blank">
+      <datalist id="random_usernames">
+        <option value="ooofds1"></option>
+        <option value="jsfjsa3"></option>
+        <option value="jasdfkj4"></option>
+      </datalist>
+      <fieldset>
+        <legend>Personal Infomration</legend>
 
-<p>hello world</p>
+        <div>
+          <label>Full Name</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            id="middle_name"
+            name="middle_name"
+            placeholder="Middle Name"
+            required
+          />
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="date_of_birth">Date Of Birth</label>
+          <input
+            type="date"
+            id="date_of_birth"
+            name="date_of_birth"
+            min="1950-01-01"
+            max="2023-08-30"
+            required
+          />
+        </div>
+
+        <div>
+          <label>Gender:</label>
+          <input
+            type="radio"
+            name="gender"
+            id="genderMale"
+            value="male"
+            required
+          />
+          <label for="genderMale">Male</label>
+          <input
+            type="radio"
+            name="gender"
+            id="genderFemale"
+            value="female"
+            required
+          />
+          <label for="genderFemale">Female</label>
+        </div>
+
+        <div>
+          <label for="nationality">Nationality:</label>
+          <select name="nationality" id="nationality" required>
+            <option value="" disabled selected>- Select Country -</option>
+            <optgroup label="Middle East">
+              <option value="saudi_arabia">Saudi Arabia</option>
+              <option value="bahrain">Bahrain</option>
+              <option value="iran">Iran</option>
+              <option value="iraq">Iraq</option>
+              <option value="jordan">Jordan</option>
+              <option value="kuwait">Kuwait</option>
+              <option value="lebanon">Lebanon</option>
+              <option value="oman">Oman</option>
+              <option value="qatar">Qatar</option>
+            </optgroup>
+            <optgroup label="West">
+              <option value="united_states_of_america">
+                United States of America
+              </option>
+              <option value="canada">Canada</option>
+              <option value="united_kingdom">United Kingdom</option>
+              <option value="france">France</option>
+              <option value="germany">Germany</option>
+              <option value="spain">Spain</option>
+              <option value="italy">Italy</option>
+              <option value="portugal">Portugal</option>
+              <option value="netherlands">Netherlands</option>
+              <option value="belgium">Belgium</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div>
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="address">Address:</label>
+          <input type="text" name="address" id="address" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Account Information</legend>
+        <div>
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            minlength="4"
+            maxlength="16"
+            list="random_usernames"
+          />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            minlength="8"
+            maxlength="32"
+          />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Job Infomration</legend>
+        <div>
+          <label for="job_title">Job Title</label>
+          <input type="text" name="job_title" id="job_title" />
+        </div>
+        <div>
+          <label for="job_salary">Job Salary</label>
+          <input
+            type="number"
+            name="job_salary"
+            id="job_salary"
+            min="4000"
+            max="16000"
+            step="500"
+          />
+        </div>
+        <div>
+          <label for="working_hours">Working Hours:</label>
+          <input
+            type="range"
+            name="working_hours"
+            id="working_hours"
+            min="4"
+            max="16"
+            step="2"
+            value="8"
+            oninput="working_hours_result.value=working_hours.value"
+          />
+          <output name="working_hours_result" for="working_hours">8</output
+          >&nbsp;<span>Hours</span>
+        </div>
+        <div>
+          <label for="start_of_work_day">Start of Work Day</label>
+          <input
+            type="time"
+            name="start_of_work_day"
+            id="start_of_work_day"
+            value="08:00"
+            min="08:00"
+            min="14:00"
+          />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Profile</legend>
+        <div>
+          <label for="bio">Bio:</label>
+          <textarea
+            name="bio"
+            id="bio"
+            cols="60"
+            rows="5"
+            maxlength="255"
+          ></textarea>
+        </div>
+        <div>
+          <label for="avatar">Avatar:</label>
+          <input type="file" name="avatar" id="avatar" accept="image/*" />
+        </div>
+        <div>
+          <label>Interests:</label>
+          <div>
+            <input
+              type="checkbox"
+              id="sports"
+              name="interests"
+              value="sports"
+            />
+            <label for="sports">Sports</label><br />
+
+            <input type="checkbox" id="music" name="interests" value="music" />
+            <label for="music">Music</label><br />
+
+            <input
+              type="checkbox"
+              id="movies"
+              name="interests"
+              value="movies"
+            />
+            <label for="movies">Movies</label>
+          </div>
+        </div>
+      </fieldset>
+      <div>
+        <input type="checkbox" name="terms" id="terms" required />
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+      <div style="text-align: center">
+        <input type="reset" value="Clear" />
+        <input type="button" value="Save as draft" />
+        <input type="submit" value="Apply" />
+      </div>
+    </form>
   </body>
 </html>
