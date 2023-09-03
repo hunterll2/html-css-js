@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Area</title>
-    <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <script src="./number_guessing_game.js" defer></script>
     <style>
-      .enter-guess-form {
+        .enter-guess-form {
             margin: 1rem auto;
             text-align: center;
             font-size: 32px;
@@ -32,26 +32,32 @@
       it in 10 turns or fewer. We'll tell you if your guess was to high or too
       low.
     </p>
-
-    <form action="#" id="form">
-      <div>
-        <label for="user_guess">Enter a Guess</label>
+    <form action="#" id="form" style="margin: 2rem auto;">
+      <div style="text-align: center;">
+        <label for="user_guess">Enter a guess</label>
       </div>
       <div class="enter-guess-form">
-        <input type="number" name="user_guess" id="user_guess" min="1" max="100" value="1">
-        <input type="submit" id="submit_guess" value="Submit Guess">
+        <input
+          type="number"
+          name="user_guess"
+          id="user_guess"
+          min="1"
+          max="100"
+          value="1"
+        />
+        <input type="submit" id="submit_guess" value="Submit guess" />
       </div>
     </form>
 
     <div style="text-align: center;">
-      <div id="div_message"></div>
-      <div id="div_hint"></div>
-      <p>Previous Guesses</p>
-      <span id="span_guess_records"></span>
+        <div id="div_message"></div>
+        <div id="div_hint"></div>
+        <p style="font-size: smaller;">Previous guesses</p>
+        <span id="span_guess_records"></span>
     </div>
 
     <div style="text-align: right;">
-      <button id="btn_start_over">Start Over</button>
+        <button id="btn_start_over">Start Over</button>
     </div>
   </body>
 </html>

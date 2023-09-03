@@ -43,3 +43,10 @@ Video Link: https://youtu.be/Fj7vsG_PvK4
 Video Link: https://youtu.be/Aj0LZUMOGOg
 
 - Survey form in HTML
+
+## Session 7 - Introduction to JS
+
+Video Link: https://youtu.be/iPg0z7rlbTc
+
+- General Points about JS
+- An example of using JS with HTML (Guess the number game)
