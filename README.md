@@ -50,3 +50,11 @@ Video Link: https://youtu.be/iPg0z7rlbTc
 
 - General Points about JS
 - An example of using JS with HTML (Guess the number game)
+
+## Session 8 - Varaibles, Numbers and Strings
+
+Video Link: https://youtu.be/DVZcQwFGjgw
+
+- Varaibles
+- Numbers
+- Strings

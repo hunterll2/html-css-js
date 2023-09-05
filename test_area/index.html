@@ -4,54 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Area</title>
-    <script src="./script.js" defer></script>
+    <!-- <script src="./script.js" defer></script> -->
     <link rel="stylesheet" href="../assets/styles/main.css" />
-    <style>
-      .enter-guess-form {
-            margin: 1rem auto;
-            text-align: center;
-            font-size: 32px;
-        }
-        .enter-guess-form > * {
-            font-size: 1em;
-            font-weight: normal !important;
-            padding: 16px;
-        }
-        .correct {
-            color: green;
-        }
-        .wrong {
-            color: red;
-        }
-    </style>
+    <style></style>
+    
   </head>
   <body>
-    <h1>Number Guessing Game</h1>
-    <p>
-      We have selected a random number between 1 and 100. See if you can guess
-      it in 10 turns or fewer. We'll tell you if your guess was to high or too
-      low.
-    </p>
+    <button>Press me</button>
+    <div id="greeting"></div>
+    <script>
+      const button = document.querySelector("button");
+      button.addEventListener("click", greet);
 
-    <form action="#" id="form">
-      <div>
-        <label for="user_guess">Enter a Guess</label>
-      </div>
-      <div class="enter-guess-form">
-        <input type="number" name="user_guess" id="user_guess" min="1" max="100" value="1">
-        <input type="submit" id="submit_guess" value="Submit Guess">
-      </div>
-    </form>
-
-    <div style="text-align: center;">
-      <div id="div_message"></div>
-      <div id="div_hint"></div>
-      <p>Previous Guesses</p>
-      <span id="span_guess_records"></span>
-    </div>
-
-    <div style="text-align: right;">
-      <button id="btn_start_over">Start Over</button>
-    </div>
+      function greet() {
+        const name = prompt("What is your name?");
+        const greeting = document.querySelector("#greeting");
+        greeting.textContent = `Hello ${name}, nice to see you!`;
+      }
+    </script>
   </body>
 </html>
