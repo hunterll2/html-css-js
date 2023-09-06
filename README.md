@@ -58,3 +58,13 @@ Video Link: https://youtu.be/DVZcQwFGjgw
 - Varaibles
 - Numbers
 - Strings
+
+## Session 9 - String Methods and Arrays
+
+Video Link: https://youtu.be/6IieczdJdiU
+
+- String methods
+- Arrays
+- Arrays methods
+
+Note: See the [javascript](https://github.com/hunterll2/html-css-js/tree/main/javascript) folder for the complete explanation
