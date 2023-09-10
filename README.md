@@ -68,3 +68,10 @@ Video Link: https://youtu.be/6IieczdJdiU
 - Arrays methods
 
 Note: See the [javascript](https://github.com/hunterll2/html-css-js/tree/main/javascript) folder for the complete explanation
+
+## Session 10 - Conditions & Loops
+
+Video Link: https://youtu.be/CdiYBEO9rdE
+
+- Conditionals Statements
+- Loops Statements

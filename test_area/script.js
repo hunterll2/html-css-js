@@ -137,7 +137,7 @@ if (x2 == y2) {
 //     const name = product.split(":")[0]
 //     const price = Number(product.split(":")[1])
 //     total += price
-    
+
 //     let itemText = `${name} — $${price}`;
 
 //     const listItem = document.createElement('li');
@@ -152,40 +152,57 @@ if (x2 == y2) {
 
 // ex6
 
-const list = document.querySelector('ul');
-const searchInput = document.querySelector('input');
-const searchBtn = document.querySelector('button');
+// const list = document.querySelector('ul');
+// const searchInput = document.querySelector('input');
+// const searchBtn = document.querySelector('button');
 
-list.innerHTML = '';
+// list.innerHTML = '';
 
-const myHistory = [];
-const MAX_HISTORY = 5;
+// const myHistory = [];
+// const MAX_HISTORY = 5;
 
-searchBtn.onclick = () => {
-  // we will only allow a term to be entered if the search input isn't empty
-  if (searchInput.value !== '') {
-    // number 1
-    myHistory.unshift(searchInput.value)
+// searchBtn.onclick = () => {
+//   // we will only allow a term to be entered if the search input isn't empty
+//   if (searchInput.value !== '') {
+//     // number 1
+//     myHistory.unshift(searchInput.value)
 
-    // empty the list so that we don't display duplicate entries
-    // the display is regenerated every time a search term is entered.
-    list.innerHTML = '';
+//     // empty the list so that we don't display duplicate entries
+//     // the display is regenerated every time a search term is entered.
+//     list.innerHTML = '';
 
-    // loop through the array, and display all the search terms in the list
-    for (const itemText of myHistory) {
-      const listItem = document.createElement('li');
-      listItem.textContent = itemText;
-      list.appendChild(listItem);
+//     // loop through the array, and display all the search terms in the list
+//     for (const itemText of myHistory) {
+//       const listItem = document.createElement('li');
+//       listItem.textContent = itemText;
+//       list.appendChild(listItem);
+//     }
+
+//     // If the array length is 5 or more, remove the oldest search term
+//     if (myHistory.length >= MAX_HISTORY) {
+//       // number 2
+//         myHistory.pop()
+//     }
+
+//     // empty the search input and focus it, ready for the next term to be entered
+//     searchInput.value = '';
+//     searchInput.focus();
+//   }
+// }
+
+
+/* */
+
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  const num = input.value;
+  for (let i = 1; i <= num; i++) {
+    if (i !== 25 && i !== 50 && i !== 75 && i !== 100) {
+      console.log("skip")
+      continue;
     }
-
-    // If the array length is 5 or more, remove the oldest search term
-    if (myHistory.length >= MAX_HISTORY) {
-      // number 2
-        myHistory.pop()
-    }
-
-    // empty the search input and focus it, ready for the next term to be entered
-    searchInput.value = '';
-    searchInput.focus();
+    console.log(i)
   }
-}
+});
