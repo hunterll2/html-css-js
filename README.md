@@ -75,3 +75,9 @@ Video Link: https://youtu.be/CdiYBEO9rdE
 
 - Conditionals Statements
 - Loops Statements
+
+## Session 11 - Functions
+
+Video Link: https://youtu.be/8rzn6qaBmG8
+
+- Functions
