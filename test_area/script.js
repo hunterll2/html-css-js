@@ -87,4 +87,46 @@ function displayMessage(msgText, msgType) {
   }
 }
 
-/* */
+/* Session 12 */
+
+/* Exanple 1 *
+const person = {
+  name: {
+    first: "Bob",
+    last: "Smith",
+  },
+  age: 32,
+  bio() {
+    console.log(this)
+    // console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+  },
+  introduceSelf: function () {
+    console.log(`Hi! I'm ${this.name.first}.`);
+  },
+};
+
+/* Example 2 */
+
+function Person(name) {
+  this.name = name;
+  this.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);
+  };
+}
+
+const ayed = new Person('name')
+const abull = new Person('name')
+
+console.log(ayed)
+
+function createPerson(name) {
+  const obj = {};
+  obj.name = name;
+  obj.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);
+  };
+  return obj;
+}
+
+const person1 = createPerson("ayed")
+const person2 = createPerson("Abdullah")

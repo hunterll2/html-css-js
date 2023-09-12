@@ -81,3 +81,9 @@ Video Link: https://youtu.be/CdiYBEO9rdE
 Video Link: https://youtu.be/8rzn6qaBmG8
 
 - Functions
+
+## Session 12 - Objects
+
+Video Link: https://youtu.be/HFomG1Y3Bec
+
+- Objects
