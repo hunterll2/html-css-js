@@ -87,7 +87,7 @@ function displayMessage(msgText, msgType) {
   }
 }
 
-/* Session 12 */
+/* ========== Session 12 ========== */
 
 /* Exanple 1 *
 const person = {
@@ -105,7 +105,7 @@ const person = {
   },
 };
 
-/* Example 2 */
+/* Example 2 *
 
 function Person(name) {
   this.name = name;
@@ -130,3 +130,120 @@ function createPerson(name) {
 
 const person1 = createPerson("ayed")
 const person2 = createPerson("Abdullah")
+
+/* ========== Session 13 ========== *
+
+function Item(name, price, quantity) {
+  this.name = name;
+  this.price = price;
+  this.quantity = quantity;
+
+  this.totalPrice = function () {
+    return this.price * this.quantity
+  }
+
+  this.toString = function() {
+    return `Item: ${this.name}\nPrice: ${this.price}$\tQuantity: ${this.quantity}\tTotal: ${this.totalPrice()}$`
+  }
+}
+
+function Bill(items) {
+  this.items = items
+  this.GetTotal = function () {
+    let total = 0;
+    for (let item of this.items) {
+      total += item.totalPrice()
+    }
+    return total
+  }
+  this.PrintBill = function() {
+    for (let item of this.items) {
+      console.log(item.toString())
+    }
+    console.log(`Total = ${this.GetTotal()}$`)
+  }
+}
+
+const shoppingCart = []
+
+shoppingCart.push(new Item("Bread", 1, 3))
+shoppingCart.push(new Item("Banana", 6, 2))
+shoppingCart.push(new Item("Apple", 9, 3))
+shoppingCart.push(new Item("Juice", 3, 4))
+
+const cusomterBill = new Bill(shoppingCart)
+
+cusomterBill.PrintBill()
+
+/* *
+
+function Item(name, price, quantity) {
+  this.name = name
+  this.price = price
+  this.quantity = quantity
+
+  this.getTotalPrice = function() {
+    return this.price * this.quantity
+  }
+
+  this.toString = function() {
+    return `${this.name}\nPrice: ${this.price}$\tQuantity: ${this.quantity}\tTotal: ${this.getTotalPrice()}$`
+  }
+}
+
+function Bill(items) {
+  this.items = items
+  this.getTotalPrice = function () {
+    let total = 0
+    for (let item of this.items) {
+      total += item.getTotalPrice()
+    }
+    return total
+  },
+  this.printBill = function () {
+    for (let item of this.items) {
+      console.log(item.toString())
+    }
+    console.log(`Total = ${this.getTotalPrice()}$`)
+  }
+}
+
+const shoppingCart = [new Item("Bread", 1, 2), new Item("Orange Juice", 4, 3), new Item("Apple Juice", 3, 5), new Item("Banna", 6, 2), new Item("Milk", 8, 1)]
+
+let customer1Bill = new Bill(shoppingCart)
+
+customer1Bill.printBill()
+
+/* */
+
+function Item(name, price) {
+  this.name = name
+  this.price = price
+
+  this.toString = function() {
+    return `${this.name}\nPrice: ${this.price}$`
+  }
+}
+
+function Bill(items) {
+  this.items = items
+  this.getTotalPrice = function () {
+    let total = 0
+    for (let item of this.items) {
+      total += item.price
+    }
+    return total
+  },
+  this.printBill = function () {
+    for (let item of this.items) {
+      console.log(item.toString())
+    }
+    console.log(`Total = ${this.getTotalPrice()}$`)
+  }
+}
+
+const shoppingCart = [new Item("Bread", 1), new Item("Orange Juice", 4), new Item("Apple Juice", 3), new Item("Banna", 6), new Item("Milk", 8), new Item("Milk", 8)]
+
+let customer1Bill = new Bill(shoppingCart)
+
+customer1Bill.printBill()

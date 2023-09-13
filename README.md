@@ -87,3 +87,9 @@ Video Link: https://youtu.be/8rzn6qaBmG8
 Video Link: https://youtu.be/HFomG1Y3Bec
 
 - Objects
+
+## Session 13 - Objects prototypes
+
+Video Link: https://youtu.be/8kspoc4ond0
+
+- Objects prototypes
