@@ -93,3 +93,10 @@ Video Link: https://youtu.be/HFomG1Y3Bec
 Video Link: https://youtu.be/8kspoc4ond0
 
 - Objects prototypes
+
+## Session 14 - Events, modules
+
+Video Link: https://youtu.be/FKWD_yfax_A
+
+- DOM events
+- JS Modules

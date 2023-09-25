@@ -7,11 +7,61 @@
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="../assets/styles/main.css" />
     <style>
+      .tile {
+        height: 100px;
+        width: 25%;
+        float: left;
+      }
+
+      /* Session 13 *
+      .alarm {
+        text-align: center;
+        margin: 25% auto 0;
+      }
+      .alarm input[name="timer"] {
+        font-size: 72px;
+        padding: 16px;
+        text-align: center;
+        width: 650px;
+      }
+      .alarm p {
+        font-size: 2rem;
+      }
+      */
     </style>
   </head>
   <body>
-    <input type="text" name="input_text" id="input_text">
-    <hr>
-    <button>Click me</button>
+    <div id="container">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+
+    <!-- Session 13 -->
+    <!-- <form action="#">
+      <div class="alarm">
+        <div>
+          <input type="text" name="name" id="name" placeholder="Name" />
+          <input type="number" name="delay" id="delay" step="1" placeholder="Delay (In Minutes)" />
+          <input type="submit" value="Set Alarm" />
+          <input type="reset" value="Reset" />
+        </div>
+        <input type="text" name="timer" id="timer" value="00:00:00" size="8" disabled />
+        <p id="output"></p>
+      </div>
+    </form> -->
   </body>
 </html>

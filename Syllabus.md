@@ -56,10 +56,11 @@
   - [ ] Iframes
   - [ ] YouTube with iframe
 
-- You can create sections on a webpage and jump to them using <a> tags and adding ids to the elements you wish to jump to.
+- You can create sections on a webpage and jump to them using `<a>` tags and adding ids to the elements you wish to jump to.
 
 
 ## CSS
+
 - the id problem
 - [ ] What is CSS?
 - [ ] CSS Demo
@@ -196,19 +197,35 @@
 - [ ] JavaScript Classes
 - [ ] JavaScript Modules
 
-## Git
-  - git config --global user.email "you@example.com"
+## Resources 
 
+- HTTPS
+- Node.js
+- NPM
+- Git
+- CMD
 
-## Node.js
-
-## Vue.js
-
-## Websites
-
-- Github
-- W3Schools
-- MDN
-- Fontawasom
+- Vue.js
 - Bootstrap
-- 
+- Fontawasom
+- Firebase
+
+## Install resources
+
+1. install nodejs, npm, git
+2. create vue app
+3. clear vue project
+4. include bootstrap, fontawasom
+5. include firebase
+
+## Points
+
+- [ ] events
+- [ ] modules
+- [ ] promises
+- [ ] flexbox
+- [ ] grid
+- [ ] data-
+- [ ] query string
+- [ ] absolute vs relative path
+- [ ] by value & by ref

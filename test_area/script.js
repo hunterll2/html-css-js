@@ -1,4 +1,4 @@
-/* ========== Session 11 ========== */
+/* ======================================== Session 11 ======================================== */
 
 /* Exmaple 1 *
 let textInput = document.querySelector("input[type='text']")
@@ -87,7 +87,7 @@ function displayMessage(msgText, msgType) {
   }
 }
 
-/* ========== Session 12 ========== */
+/* ======================================== Session 12 ======================================== */
 
 /* Exanple 1 *
 const person = {
@@ -131,7 +131,7 @@ function createPerson(name) {
 const person1 = createPerson("ayed")
 const person2 = createPerson("Abdullah")
 
-/* ========== Session 13 ========== *
+/* ======================================== Session 13 ======================================== *
 
 function Item(name, price, quantity) {
   this.name = name;
@@ -214,36 +214,87 @@ let customer1Bill = new Bill(shoppingCart)
 
 customer1Bill.printBill()
 
+/* ======================================== Session 14 ======================================== *
+
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const setAlarmBtn = document.querySelector("input[type='submit']");
+const resetAlarmBtn = document.querySelector("input[type='reset']");
+const timer = document.querySelector("#timer");
+const output = document.querySelector("#output");
+
+const wakeUpMessage = "Wake up, %name%!"
+
+let abortController = new AbortController()
+
+function alarm(person, delay, signal) {
+  let timeout
+  // person = Math.floor(Math.random() * 100)
+
+  return new Promise((resolve, reject) => {
+    if (delay < 0)
+      throw new Error("Alarm delay must not be negative");
+
+    signal.addEventListener("abort", e => {
+      clearTimeout(timeout)
+      resolve()
+    })
+
+    timeout = setTimeout(() => {
+      resolve(wakeUpMessage.replace("%name%", person));
+    }, delay);
+  });
+}
+
+let itnterval
+async function callback() {
+  clearInterval(itnterval)
+  abortController = new AbortController()
+
+  try {
+    const delayInMs = delay.value * 60 * 1000;
+
+    let ms = 0
+    itnterval = setInterval(() => {
+      const minutes = (Math.floor((ms / 60000)) % 60).toString().padStart(2, '0')
+      const seconds = (Math.floor((ms / 1000)) % 60).toString().padStart(2, '0')
+      const miliseconds = (Math.floor(ms / 16) % 60).toString().padStart(2, '0')
+      timer.value = `${minutes}:${seconds}:${miliseconds}`
+      ms++
+    }, 1);
+
+    const message = await alarm(name.value, delayInMs, abortController.signal);
+
+    clearInterval(itnterval)
+
+    output.textContent = message;
+  } catch (error) {
+    output.textContent = `Couldn't set alarm: ${error}`;
+  }
+}
+
+setAlarmBtn.addEventListener("click", callback);
+
+resetAlarmBtn.addEventListener("click", () => {
+  abortController.abort()
+  clearInterval(itnterval)
+  output.textContent = ""
+})
+
 /* */
 
-function Item(name, price) {
-  this.name = name
-  this.price = price
-
-  this.toString = function() {
-    return `${this.name}\nPrice: ${this.price}$`
-  }
+function random(number) {
+  return Math.floor(Math.random() * number);
 }
 
-function Bill(items) {
-  this.items = items
-  this.getTotalPrice = function () {
-    let total = 0
-    for (let item of this.items) {
-      total += item.price
-    }
-    return total
-  },
-  this.printBill = function () {
-    for (let item of this.items) {
-      console.log(item.toString())
-    }
-    console.log(`Total = ${this.getTotalPrice()}$`)
-  }
+function bgChange() {
+  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return rndCol;
 }
 
-const shoppingCart = [new Item("Bread", 1), new Item("Orange Juice", 4), new Item("Apple Juice", 3), new Item("Banna", 6), new Item("Milk", 8), new Item("Milk", 8)]
+const container = document.querySelector("#container");
 
-let customer1Bill = new Bill(shoppingCart)
-
-customer1Bill.printBill()
+container.addEventListener("click", (event) => {
+  console.log(event);
+  event.target.style.backgroundColor = bgChange();
+});
