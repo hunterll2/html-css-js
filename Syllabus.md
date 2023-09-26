@@ -223,6 +223,7 @@
 - [ ] events
 - [ ] modules
 - [ ] promises
+- [ ] try catch
 - [ ] flexbox
 - [ ] grid
 - [ ] data-

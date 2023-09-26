@@ -100,3 +100,11 @@ Video Link: https://youtu.be/FKWD_yfax_A
 
 - DOM events
 - JS Modules
+
+## Session 15 - Synchronous vs. Asynchronous Programming
+
+Video Link: https://youtu.be/4Y6Ab66Q_qg
+
+- Introducing asynchronous JavaScript
+- Promises and Fetch API
+- Async and Await

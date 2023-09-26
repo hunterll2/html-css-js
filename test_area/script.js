@@ -214,7 +214,7 @@ let customer1Bill = new Bill(shoppingCart)
 
 customer1Bill.printBill()
 
-/* ======================================== Session 14 ======================================== *
+/* ======================================== Session 15 ======================================== *
 
 const name = document.querySelector("#name");
 const delay = document.querySelector("#delay");
@@ -283,18 +283,33 @@ resetAlarmBtn.addEventListener("click", () => {
 
 /* */
 
-function random(number) {
-  return Math.floor(Math.random() * number);
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const setAlarmBtn = document.querySelector("input[type='submit']");
+const resetAlarmBtn = document.querySelector("input[type='reset']");
+const timer = document.querySelector("#timer");
+const output = document.querySelector("#output");
+
+function alarm(person, delay) {
+  return new Promise((resolve, rejecte) => {
+    if (delay < 0)
+      throw new Error("Alarm delay must not be negative")
+
+    setTimeout(() => {
+      resolve(`Wake up, ${person}`)
+    }, delay);
+  })
 }
 
-function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  return rndCol;
+async function callbackFun() {
+  try {
+    const delayInMs = delay.value * 60 * 1000
+
+    const message = await alarm(name.value, delayInMs)
+    output.textContent = message
+  } catch (error) {
+    output.textContent = `Couldn't set alarm: ${error}`;
+  }
 }
 
-const container = document.querySelector("#container");
-
-container.addEventListener("click", (event) => {
-  console.log(event);
-  event.target.style.backgroundColor = bgChange();
-});
+setAlarmBtn.addEventListener("click", callbackFun)
