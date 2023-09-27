@@ -7,7 +7,7 @@
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="../assets/styles/main.css" />
     <style>
-      /* Session 15 */
+      /* Session 15 *
       div {
         margin: 16px 0;
       }
@@ -24,22 +24,44 @@
       .alarm p {
         font-size: 2rem;
       }
-      
+      /*  */
+      .container {
+        display: flex;
+        /* flex-direction: column-reverse; */
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+      .container > div {
+        border: 1px solid black;
+        padding: 16px;
+        background-color: whitesmoke;
+        /* display: inline-block; */
+        /* width: 23%; */
+      }
     </style>
   </head>
   <body>
-    <!-- Session 15 -->
-    <div class="alarm">
-      <div>
-        <input type="text" name="name" id="name" placeholder="Name" />
-        <input type="number" name="delay" id="delay" placeholder="Delay (In Minutes)" />
-        <input type="submit" value="Set Alarm" />
-        <input type="reset" value="Reset" />
-      </div>
-      <input type="text" name="timer" id="timer" value="00:00:00" size="8" disabled />
-      <p id="output"></p>
+    <div class="container">
+      <div style="flex-grow: 1;">1</div>
+      <div style="flex-grow: 1;">2</div>
+      <div class="item" data-item-number="3">3</div>
+      <div  class="item" data-item-number="4">4</div>
     </div>
-    <!-- <form action="#" novalidate>
-    </form> -->
+
+    <!-- Session 15 --
+    <form action="#" novalidate>
+      <div class="alarm">
+        <div>
+          <input type="text" name="name" id="name" placeholder="Name" />
+          <input type="number" name="delay" id="delay" placeholder="Delay (In Minutes)" />
+          <input type="submit" value="Set Alarm" />
+          <input type="reset" value="Reset" />
+        </div>
+        <input type="text" name="timer" id="timer" value="00:00:00" size="8" disabled />
+        <p id="output"></p>
+      </div>
+    </form>
+     -->
   </body>
 </html>

@@ -108,3 +108,12 @@ Video Link: https://youtu.be/4Y6Ab66Q_qg
 - Introducing asynchronous JavaScript
 - Promises and Fetch API
 - Async and Await
+
+# Session 16 - Misc.
+
+Video Link: https://youtu.be/bFNSL_3H_vs
+
+- Continue working on Alram example
+- CSS Flexbox
+- HTML "data-*" attribute
+- Query String (?name="Value")

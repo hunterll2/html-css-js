@@ -283,6 +283,7 @@ resetAlarmBtn.addEventListener("click", () => {
 
 /* */
 
+const form = document.querySelector("form")
 const name = document.querySelector("#name");
 const delay = document.querySelector("#delay");
 const setAlarmBtn = document.querySelector("input[type='submit']");
@@ -301,15 +302,29 @@ function alarm(person, delay) {
   })
 }
 
-async function callbackFun() {
+async function callbackFun(e) {
+  e.preventDefault();
+
   try {
     const delayInMs = delay.value * 60 * 1000
 
+    let ms = 0
+    const interval = setInterval(()=> {
+      const seconds = (Math.floor(ms / 1000) % 60).toString().padStart(2, "0")
+      const minutes = (Math.floor(ms / 60000) % 60).toString().padStart(2, "0")
+      const miliseconds = (Math.floor(ms / 16) % 60).toString().padStart(2, "0")
+      timer.value = `${minutes}:${seconds}:${miliseconds}`
+      ms++
+    }, 1)
+    
     const message = await alarm(name.value, delayInMs)
+    
+    clearInterval(interval)
+
     output.textContent = message
   } catch (error) {
     output.textContent = `Couldn't set alarm: ${error}`;
   }
 }
 
-setAlarmBtn.addEventListener("click", callbackFun)
+form.addEventListener("submit", callbackFun)
