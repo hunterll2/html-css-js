@@ -117,3 +117,21 @@ Video Link: https://youtu.be/bFNSL_3H_vs
 - CSS Flexbox
 - HTML "data-*" attribute
 - Query String (?name="Value")
+
+# Session 17 - Start the Project
+
+Video Link: https://youtu.be/0dyOAD5lDCw
+
+- Overview over most basic web technologies
+  - HTTPS
+  - Git
+  - NPM
+  - Node.js
+  - Vue.js
+  - Firebase
+  - Bootstrap
+  - Fontawasom
+- Install: `Node.js`, `git`
+- **Create Vue App**
+    - `npm create vue@latest`
+- Use the VSCode `Source Control` Helper and link it with `Github`

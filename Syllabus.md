@@ -199,24 +199,29 @@
 
 ## Resources 
 
-- HTTPS
-- Node.js
-- NPM
-- Git
 - CMD
+- HTTPS
+- Git
+- NPM
+- Node.js
 
 - Vue.js
+- Firebase
 - Bootstrap
 - Fontawasom
-- Firebase
 
 ## Install resources
 
-1. install nodejs, npm, git
-2. create vue app
-3. clear vue project
-4. include bootstrap, fontawasom
-5. include firebase
+1. Install nodejs, npm, git
+2. Create vue app
+3. Run and commit
+4. Clear vue project
+5. Run and commit
+6. Create Github account and publish branch
+7. Include bootstrap, fontawasom
+8. Include firebase
+
+### 
 
 ## Points
 
@@ -234,7 +239,7 @@
 - [x] query string
   - [ ] [URL Parameter](https://www.semrush.com/blog/url-parameters/)
   - [ ] [URLSearchParams](https://medium.com/swlh/urlsearchparams-in-javascript-df524f705317)
-- [ ] [absolute vs relative path](https://www.w3schools.com/html/html_filepaths.asp)
+- [x] [absolute vs relative path](https://www.w3schools.com/html/html_filepaths.asp)
 - [ ] by value & by ref
   - [ ] [JS Copy an Object – How to Clone an Obj in JavaScript](https://www.freecodecamp.org/news/clone-an-object-in-javascript/)
 
