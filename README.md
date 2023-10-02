@@ -135,3 +135,13 @@ Video Link: https://youtu.be/0dyOAD5lDCw
 - **Create Vue App**
     - `npm create vue@latest`
 - Use the VSCode `Source Control` Helper and link it with `Github`
+
+# Session 18
+
+Video Link: https://www.youtube.com/watch?v=eCBrGjObUVo
+
+- Add Bootstrap, FontAwasom
+- Create Firebase account
+- Link with Firebase
+- The idea of App.vue and why we use vue for this course
+- Create the App strcture
