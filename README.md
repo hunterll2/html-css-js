@@ -109,7 +109,7 @@ Video Link: https://youtu.be/4Y6Ab66Q_qg
 - Promises and Fetch API
 - Async and Await
 
-# Session 16 - Misc.
+## Session 16 - Misc.
 
 Video Link: https://youtu.be/bFNSL_3H_vs
 
@@ -118,7 +118,7 @@ Video Link: https://youtu.be/bFNSL_3H_vs
 - HTML "data-*" attribute
 - Query String (?name="Value")
 
-# Session 17 - Start the Project
+## Session 17 - Start the Project
 
 Video Link: https://youtu.be/0dyOAD5lDCw
 
@@ -136,12 +136,22 @@ Video Link: https://youtu.be/0dyOAD5lDCw
     - `npm create vue@latest`
 - Use the VSCode `Source Control` Helper and link it with `Github`
 
-# Session 18
+## Session 18
 
 Video Link: https://www.youtube.com/watch?v=eCBrGjObUVo
 
-- Add Bootstrap, FontAwasom
-- Create Firebase account
-- Link with Firebase
-- The idea of App.vue and why we use vue for this course
-- Create the App strcture
+- [ ] Add Bootstrap, FontAwasom
+- [ ] Create Firebase account
+- [ ] Link with Firebase
+- [ ] The idea of App.vue and why we use vue for this course
+- [ ] Create the App strcture
+
+## Session 19
+
+Video Link: https://youtu.be/Lr958o8EsgU
+
+- Complete the app.vue html/css strcuture
+- Some overview about bootsrap classes
+- app.vue functions
+  - by default hide "admin" elements
+  - show current active page
