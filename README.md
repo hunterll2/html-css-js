@@ -155,3 +155,16 @@ Video Link: https://youtu.be/Lr958o8EsgU
 - app.vue functions
   - by default hide "admin" elements
   - show current active page
+
+## Session 20
+
+Video Link: https://youtu.be/tuwr46X_9Pg
+
+- sidebar breakpoint problem
+- navbar style
+- use icons in menu, btn
+- Sign Page
+  - html/css strcuture
+  - change between sign in/up btn
+  - submit event
+  - sign in/up functions
