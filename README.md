@@ -168,3 +168,10 @@ Video Link: https://youtu.be/tuwr46X_9Pg
   - change between sign in/up btn
   - submit event
   - sign in/up functions
+
+## Session 21
+
+Video Link: https://youtu.be/xyWQLgUwO-g
+
+- Complete SignPage
+- Use Firebase `Auth`
