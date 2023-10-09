@@ -175,3 +175,20 @@ Video Link: https://youtu.be/xyWQLgUwO-g
 
 - Complete SignPage
 - Use Firebase `Auth`
+
+## Session 22
+
+Video Link: https://youtu.be/o_cpKZInN78
+
+- make sure unsigned users redirected to sign page
+- add the admin users logic
+- admin pages
+  - projects
+  - project
+  - users
+- public pages
+  - Home
+- Update the router
+
+PMS Repsitory => https://github.com/hunterll2/pms
+
