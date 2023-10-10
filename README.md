@@ -192,3 +192,13 @@ Video Link: https://youtu.be/o_cpKZInN78
 
 PMS Repsitory => https://github.com/hunterll2/pms
 
+## Session 23
+
+Video Link: https://youtu.be/n8P7K51itQA
+
+- when user create an account, create document on users collection
+- Users Page
+  - load users
+  - add setAdmin/setUser event
+- App
+  - user email displayed on navbar
