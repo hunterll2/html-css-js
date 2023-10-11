@@ -202,3 +202,16 @@ Video Link: https://youtu.be/n8P7K51itQA
   - add setAdmin/setUser event
 - App
   - user email displayed on navbar
+
+##  Session 24
+
+Video Link: https://youtu.be/KeRlD0_8buo
+
+- brief preview over firestore methods
+- IsAdmin => isAdmin
+- loading helper
+- complete the admin/users page
+- admin/projects
+  - load projects
+  - add project
+  - delete
