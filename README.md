@@ -215,3 +215,19 @@ Video Link: https://youtu.be/KeRlD0_8buo
   - load projects
   - add project
   - delete
+
+# Session 25
+
+- admin/project page
+  - change some small details on html
+    - form id
+    - input names
+    - uplaod table
+    - alert
+    - back btn
+  - load project
+  - update project
+  - [on_hold] documents uploads
+- Home
+  - load projects
+  - use placeholders
