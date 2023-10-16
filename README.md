@@ -231,3 +231,26 @@ Video Link: https://youtu.be/KeRlD0_8buo
 - Home
   - load projects
   - use placeholders
+
+# Session 26
+
+Video Link: https://youtu.be/RyKxdEn21xI
+
+- admin/project
+  - add `firebase storage` into the project
+  - change some small details on html
+    - the upload btn must have "type" attribute and "id"
+    - progress bar under upload control
+    - tbody_documents_parentNode
+  - import `storage` from plugins and: `ref, uploadBytes, uploadBytesResumable, getDownloadURL, listAll, deleteObject` from firebase/storage
+  - change loadPorject to bindProject
+  - put `window.loading` before and after getting project data
+  - create helpers functions:
+    - loadProjectDocuments
+    - uploadDocument
+    - deleteDocument
+  - load project documents when page mounted
+  - handle document delation
+  - handle document uploading
+- App.vue
+  - add loading status message
