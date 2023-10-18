@@ -254,3 +254,28 @@ Video Link: https://youtu.be/RyKxdEn21xI
   - handle document uploading
 - App.vue
   - add loading status message
+
+## Session 27
+
+Video Link: https://youtu.be/8Tu5akF54tY
+
+- admin/project
+  - image upload
+- Home
+  - change `auto` to `100%`
+  - use project image
+- app.vue
+  - redirect user that hasn't verified his email to verify_email page
+- SignPage
+  - send verifiection link when an account created
+- VerifyEmail page
+
+## Session 28
+
+Video Link: https://youtu.be/DJLTwlgVHGo
+
+- project page
+  - html template
+  - `SignProjectContract` function
+  - start using custom `helpers`
+
