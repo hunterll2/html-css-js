@@ -279,3 +279,16 @@ Video Link: https://youtu.be/DJLTwlgVHGo
   - `SignProjectContract` function
   - start using custom `helpers`
 
+# Session 29
+
+Video Link: https://youtu.be/G0Yj3ktrf9o
+
+- Project
+  - small edit on html
+  - create `InsertChildrenIntoParentElement` helpers function
+  - check if user already sign the contract
+  - create `BindProjectContractDetails`
+  - create `SetProjectStatus`
+- helpers/firestore
+  - `if (!snapshot.exists()) return null`
+  - `GetDocs`
