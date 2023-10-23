@@ -292,3 +292,20 @@ Video Link: https://youtu.be/G0Yj3ktrf9o
 - helpers/firestore
   - `if (!snapshot.exists()) return null`
   - `GetDocs`
+
+# Session 30
+
+Video Link: https://youtu.be/76afJkCspAo
+
+- Project
+  - `BindProjectBillsDetails`
+  - change html
+    - use hidden input inside pyment form
+    - remove pay button from bills table
+  - use GetDateString and GetCurrency
+  - remove the `toFixed` when creating a bill
+  - handle the `bill payment` form submit event
+- helpers/common
+  - `GetCurrency`
+
+
