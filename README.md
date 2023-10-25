@@ -308,4 +308,26 @@ Video Link: https://youtu.be/76afJkCspAo
 - helpers/common
   - `GetCurrency`
 
+# Session 31
 
+Video Link 1: https://youtu.be/q42kg2nTxU0
+Video Link 2: https://youtu.be/-BUzfXjwlt0
+
+(فيه جزئين لاني وقفت التسجيل ولما رجعت اضغط على استكمال ضغطت على انهاء التسجيل بالغلط)
+
+- hide Admin sidebar menu by default
+- Project
+  - enahance the late bill payment form style
+  - set loading messages
+  - make status progress bar width 5% by deafult
+  - Credit Card payment modal
+  - `late bill Payment form` display the `credit Card Payment form`
+  - `credit Card Payment form` submit
+- user/projects
+  - add into router
+  - add html
+  - get user projects
+  - load user projects
+  - create and use `GetProjectBills` and `GetBillsStats`
+- helpers/DOM
+  - in `InsertChildrenIntoParentElement` use async
