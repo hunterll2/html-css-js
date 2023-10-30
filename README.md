@@ -331,3 +331,18 @@ Video Link 2: https://youtu.be/-BUzfXjwlt0
   - create and use `GetProjectBills` and `GetBillsStats`
 - helpers/DOM
   - in `InsertChildrenIntoParentElement` use async
+
+## Session 32
+
+Video Link: https://youtu.be/fwYlMpjQxz8
+
+- Placeholders functionality
+  - `App.vue`
+  - `Project`
+  - `user/Projects` 
+- `Home`: correct image long loading problem
+- `admin/Project`
+  - if user update the project data without select an image, the old image will be lost
+  - display current project image
+  - upload file progress doesn't work
+
