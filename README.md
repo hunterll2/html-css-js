@@ -346,3 +346,29 @@ Video Link: https://youtu.be/fwYlMpjQxz8
   - display current project image
   - upload file progress doesn't work
 
+## Session 33
+
+Video Link: https://youtu.be/3xmBwfflV-w
+
+- [ ] bills order
+- [ ] change progress formula
+- [ ] add custom request html strcuture
+- [ ] regard the cancelation function
+  - must use Cloud Functions
+
+array sort example
+
+```markdown
+- give me **position** value to put B before A => B,A 
+- give me **negative** value to put A before B => A,B 
+- give me **0** to do nothing
+
+# [2, 3, 1]
+
+A - B
+3 - 2 = 1  = 2,3
+1 - 3 = -2 = 1,3
+1 - 2 = -1 = 1,2
+
+= [1,2,3]
+```
