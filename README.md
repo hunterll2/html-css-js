@@ -118,6 +118,8 @@ Video Link: https://youtu.be/bFNSL_3H_vs
 - HTML "data-*" attribute
 - Query String (?name="Value")
 
+# Start the Project
+
 ## Session 17 - Start the Project
 
 Video Link: https://youtu.be/0dyOAD5lDCw
@@ -372,3 +374,39 @@ A - B
 
 = [1,2,3]
 ```
+
+## Session 34
+
+Video Link: https://youtu.be/HlIJRFFZbMI
+
+- Deploy => https://projects-management-system.netlify.ap
+  - netlify
+- Adviecs
+  - don't repeat yourself (use logic to solve problems instead of repeat code) 
+  - separation of concerns
+  - don't reinvent the wheel 
+  - avoid data redundancy
+- What's next
+  - learn js framework
+    - Vue.js
+      - Nuxt.js
+    - React
+    - Angular
+    - Flutter (not js framework)
+  - learn backend development
+    - Firebase
+      - Auth
+      - Firestore
+      - Storage
+      - Cloud Functions
+      - Hosting
+    - AWS
+    - mySQL
+    - Node.js
+    - HTTPS
+  - Other resources:
+    - Git
+    - NPM
+    - Bootstrap
+    - Vuetify
+    - Fontawasom
