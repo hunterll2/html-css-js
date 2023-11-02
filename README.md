@@ -374,3 +374,39 @@ A - B
 
 = [1,2,3]
 ```
+
+## Session 34 - last
+
+Video Link: https://youtu.be/HlIJRFFZbMI
+
+- Deploy => https://projects-management-system.netlify.app
+  - [netlify](https://app.netlify.com/)
+- [ ] Stage 2: Adviecs
+  - [ ] don't repeat yourself (use logic to solve problems instead of repeat code) 
+  - [ ] separation of concerns
+  - [ ] don't reinvent the wheel 
+  - [ ] avoid data redundancy
+- [ ] Stage 3: What's next
+  - learn on js framework
+    - Vue.js
+      - Nuxt.js
+    - React
+    - Angular
+    - Flutter (not js framework)
+  - learn backend development
+    - Firebase
+      - Auth
+      - Firestore
+      - Storage
+      - Cloud Functions
+      - Hosting
+    - AWS
+    - mySQL
+    - Node.js
+    - HTTPS
+  - Other resources:
+    - Git
+    - NPM
+    - Bootstrap
+    - Vuetify
+    - Fontawasom
