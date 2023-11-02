@@ -375,10 +375,6 @@ A - B
 = [1,2,3]
 ```
 
-## Session 34 - last
-
-Video Link: https://youtu.be/HlIJRFFZbMI
-
 - Deploy => https://projects-management-system.netlify.app
   - [netlify](https://app.netlify.com/)
 - [ ] Stage 2: Adviecs
