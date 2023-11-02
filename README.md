@@ -218,7 +218,7 @@ Video Link: https://youtu.be/KeRlD0_8buo
   - add project
   - delete
 
-# Session 25
+## Session 25
 
 - admin/project page
   - change some small details on html
@@ -234,7 +234,7 @@ Video Link: https://youtu.be/KeRlD0_8buo
   - load projects
   - use placeholders
 
-# Session 26
+## Session 26
 
 Video Link: https://youtu.be/RyKxdEn21xI
 
@@ -281,7 +281,7 @@ Video Link: https://youtu.be/DJLTwlgVHGo
   - `SignProjectContract` function
   - start using custom `helpers`
 
-# Session 29
+## Session 29
 
 Video Link: https://youtu.be/G0Yj3ktrf9o
 
@@ -295,7 +295,7 @@ Video Link: https://youtu.be/G0Yj3ktrf9o
   - `if (!snapshot.exists()) return null`
   - `GetDocs`
 
-# Session 30
+## Session 30
 
 Video Link: https://youtu.be/76afJkCspAo
 
@@ -310,7 +310,7 @@ Video Link: https://youtu.be/76afJkCspAo
 - helpers/common
   - `GetCurrency`
 
-# Session 31
+## Session 31
 
 Video Link 1: https://youtu.be/q42kg2nTxU0
 Video Link 2: https://youtu.be/-BUzfXjwlt0
@@ -374,39 +374,3 @@ A - B
 
 = [1,2,3]
 ```
-
-## Session 34
-
-Video Link: https://youtu.be/HlIJRFFZbMI
-
-- Deploy => https://projects-management-system.netlify.ap
-  - netlify
-- Adviecs
-  - don't repeat yourself (use logic to solve problems instead of repeat code) 
-  - separation of concerns
-  - don't reinvent the wheel 
-  - avoid data redundancy
-- What's next
-  - learn js framework
-    - Vue.js
-      - Nuxt.js
-    - React
-    - Angular
-    - Flutter (not js framework)
-  - learn backend development
-    - Firebase
-      - Auth
-      - Firestore
-      - Storage
-      - Cloud Functions
-      - Hosting
-    - AWS
-    - mySQL
-    - Node.js
-    - HTTPS
-  - Other resources:
-    - Git
-    - NPM
-    - Bootstrap
-    - Vuetify
-    - Fontawasom
